@@ -4,6 +4,7 @@
   "description": "discord bot for kvantoriget",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "production": "NODE_ENV=production&&npm start",
     "development": "set NODE_ENV=development&&npm start"
   },
