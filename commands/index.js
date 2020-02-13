@@ -1,15 +1,6 @@
 const data = require("../data/index.js");
-const CronJob = require("cron").CronJob;
-
-const DailyForecast = new CronJob(
-  "******",
-  () => {
-    console.log("works");
-  },
-  null,
-  true,
-  "Europe/Copenhagen"
-);
+const Discord = require("discord.js");
+const client = new Discord.Client();
 
 function penisComment(penisSize) {
   let comment = "";
@@ -59,8 +50,6 @@ const commands = msg => {
       `Din penis er ${penisSize}.${randomDe} cm. ${penisComment(penisSize)}`
     );
   }
-
-  DailyForecast.start();
 };
 
 module.exports = commands;

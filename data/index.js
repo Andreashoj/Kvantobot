@@ -72,6 +72,10 @@ const data = {
       quote: "Seriøst.. hvorfor sluger hun ikke mine svømmere?",
       quoteson: "Anz"
     }
+  ],
+  gamingForecast: [
+    "Wrap it up boys, gaming i dag ender i død og ulykke",
+    "Load up cs. NU."
   ]
 };
 
