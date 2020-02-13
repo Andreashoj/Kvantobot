@@ -1,10 +1,9 @@
 require("dotenv").config();
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const data = require("./data/index.js");
 const commands = require("./commands");
 
-const token = process.env.DISCORD_TOKEN;
+const token = ENV["DC_TOKEN"];
 
 bot.on("ready", () => {
   console.log("Kvantobot online");
