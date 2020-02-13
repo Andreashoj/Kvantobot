@@ -4,7 +4,9 @@
   "description": "discord bot for kvantoriget",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ."
+    "start": "nodemon .",
+    "production": "NODE_ENV=production&&npm start",
+    "development": "set NODE_ENV=development&&npm start"
   },
   "author": "Anz",
   "license": "ISC",
