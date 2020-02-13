@@ -3,7 +3,12 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 const commands = require("./commands");
 
-const token = process.env.DC_TOKEN;
+const environment = process.env.NODE_ENV;
+
+const token =
+  environment === "development"
+    ? process.env.DISCORD_TOKEN
+    : process.env.DC_TOKEN;
 
 bot.on("ready", () => {
   console.log("Kvantobot online");
