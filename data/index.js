@@ -75,7 +75,16 @@ const data = {
   ],
   gamingForecast: [
     "Wrap it up boys, gaming i dag ender i død og ulykke",
-    "Load up cs. NU."
+    "Load up cs. NU.",
+    "Smæk dine fucking gunners på og kom ind NU!!!",
+    "Nope. Bare sluk den pc igen.",
+    "Gaming er livet og livet er gaming.",
+    "I DAG SKER DET. LOL? CS? JEG ER LIGEGLAD, GET THE FUCK IN HERE!",
+    "Gaming i dag? Har anz banget komo's mor? JA! DER SKAL GAMES I DAG!",
+    "Meh. Gaming bliver lige så interessant i dag som at høre om brunos vinger..",
+    "Hvornår indser i at gaming er dødt...",
+    "Mix lidt alkohol ind og i vil få en lovende dag.",
+    "Ja tak! En okay dag med okay gaming så længe i holder humøret højt (komo jeg kigger på dig)!"
   ]
 };
 
