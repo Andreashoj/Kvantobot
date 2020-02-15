@@ -1,5 +1,6 @@
 const data = require("../data/index.js");
 const Discord = require("discord.js");
+const fetch = require("node-fetch");
 const client = new Discord.Client();
 
 function penisComment(penisSize) {
@@ -20,7 +21,11 @@ function randomNum(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const commands = msg => {
+function handleImage(args) {
+  return fetch(`https://reddit.com/r/${args}.json`).then(data => data.json());
+}
+
+const commands = async msg => {
   if (msg.content === "hvor bor fuglene?") {
     msg.reply("I GENBRUGSBUTIKKEN!");
   }
@@ -38,7 +43,7 @@ const commands = msg => {
   // Help
   if (msg.content === "!help") {
     msg.channel.send(
-      "!quote - random kvanto quote \n!sutbruno - for at sutte brunos 15,5'er!"
+      "**!quote - random kvanto quote \n!sutbruno - for at sutte brunos 15,5'er!\n!quote - for en random kvanto quote!\n!kvantosnap - for en random kvantosnap\n!image - for en random image search\n!raffle - eksempel -> !raffle komo bruno og så bliver en vinder valgt!**"
     );
   } else if (msg.content === "!sutbruno") {
     // FJERN IGEN HEHEHE
@@ -76,6 +81,24 @@ const commands = msg => {
     setTimeout(() => {
       msg.channel.send(`Winner is: ${item}!`);
     }, 3000);
+  }
+
+  // Search image
+  if (msg.content.startsWith("!image")) {
+    const args = msg.content.split(" ").slice(1);
+    const image = await handleImage(args[0]);
+    const filteredImages = image.data.children.filter(image =>
+      image.data.url.split(".").pop(-1) === ("jpg" || "png" || "gif")
+        ? true
+        : false
+    );
+    const num = randomNum(1, filteredImages.length);
+
+    if (filteredImages >= 0) {
+      return msg.channel.send("Ingen billeder <:pepehands:538114405838225409>");
+    } else {
+      return msg.channel.send(image.data.children[num].data.url);
+    }
   }
 };
 
