@@ -50,6 +50,16 @@ const commands = msg => {
       `Din penis er ${penisSize}.${randomDe} cm. ${penisComment(penisSize)}`
     );
   }
+
+  if (msg.content === "!kvantosnap") {
+    const randomPic = Math.floor(Math.random() * (128 - 1 + 1) + 1);
+
+    msg.channel
+      .send("", {
+        files: [`assets/dc_snap/kvanto_${randomPic}.jpeg`]
+      })
+      .catch(e => console.log(e));
+  }
 };
 
 module.exports = commands;

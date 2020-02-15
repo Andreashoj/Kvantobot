@@ -84,7 +84,9 @@ const data = {
     "Meh. Gaming bliver lige så interessant i dag som at høre om brunos vinger..",
     "Hvornår indser i at gaming er dødt...",
     "Mix lidt alkohol ind og i vil få en lovende dag.",
-    "Ja tak! En okay dag med okay gaming så længe i holder humøret højt (komo jeg kigger på dig)!"
+    "Ja tak! En okay dag med okay gaming så længe i holder humøret højt (komo jeg kigger på dig)!",
+    "Læs en bog.",
+    "Ingen gaming før aftensmaden"
   ]
 };
 
