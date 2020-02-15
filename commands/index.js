@@ -53,7 +53,7 @@ const commands = async msg => {
   // penis
   if (msg.content === "!penis") {
     const randomDe = Math.floor(Math.random() * (9 - 1 + 1) + 1);
-    const penisSize = random(5, 25);
+    const penisSize = randomNum(5, 25);
 
     msg.reply(
       `Din penis er ${penisSize}.${randomDe} cm. ${penisComment(penisSize)}`
