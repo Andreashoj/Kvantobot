@@ -16,6 +16,10 @@ function penisComment(penisSize) {
   }
 }
 
+function randomNum(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 const commands = msg => {
   if (msg.content === "hvor bor fuglene?") {
     msg.reply("I GENBRUGSBUTIKKEN!");
@@ -44,21 +48,34 @@ const commands = msg => {
   // penis
   if (msg.content === "!penis") {
     const randomDe = Math.floor(Math.random() * (9 - 1 + 1) + 1);
-    const penisSize = Math.floor(Math.random() * (25.0 - 5.0 + 1) + 5);
+    const penisSize = random(5, 25);
 
     msg.reply(
       `Din penis er ${penisSize}.${randomDe} cm. ${penisComment(penisSize)}`
     );
   }
 
+  // Kvantosnap
   if (msg.content === "!kvantosnap") {
-    const randomPic = Math.floor(Math.random() * (128 - 1 + 1) + 1);
+    const randomPic = randomNum(1, 128);
 
     msg.channel
       .send("", {
         files: [`assets/dc_snap/kvanto_${randomPic}.jpeg`]
       })
       .catch(e => console.log(e));
+  }
+
+  // Raffle
+  if (msg.content.startsWith("!raffle")) {
+    const args = msg.content.split(" ").slice(1);
+    var item = args[Math.floor(Math.random() * args.length)];
+
+    msg.channel.send(`Throwing the dice..`);
+
+    setTimeout(() => {
+      msg.channel.send(`Winner is: ${item}!`);
+    }, 3000);
   }
 };
 
