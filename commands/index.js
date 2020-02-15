@@ -90,7 +90,7 @@ const commands = async msg => {
     let filteredImages = [];
     if (!image.error) {
       filteredImages = image.data.children.filter(image => {
-        const types = ["jpg", "jpeg", "gif", "png"];
+        const types = ["jpg", "jpeg", "gif", "png", "gifv"];
         return !types.indexOf(image.data.url.split(".").pop(-1));
       });
     }
