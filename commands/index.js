@@ -88,7 +88,7 @@ const commands = async msg => {
     const args = msg.content.split(" ").slice(1);
     const image = await handleImage(args[0]);
     const filteredImages = image.data.children.filter(image =>
-      image.data.url.split(".").pop(-1) === ("jpg" || "png" || "gif")
+      image.data.url.split(".").pop(-1) === ("jpg" || "png" || "gif" || "jpeg")
         ? true
         : false
     );
