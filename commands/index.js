@@ -87,17 +87,23 @@ const commands = async msg => {
   if (msg.content.startsWith("!image")) {
     const args = msg.content.split(" ").slice(1);
     const image = await handleImage(args[0]);
-    const filteredImages = image.data.children.filter(image =>
-      image.data.url.split(".").pop(-1) === ("jpg" || "png" || "gif" || "jpeg")
-        ? true
-        : false
-    );
+    let filteredImages = [];
+    if (!image.error) {
+      filteredImages = image.data.children.filter(image => {
+        const types = ["jpg", "jpeg", "gif", "png"];
+        return !types.indexOf(image.data.url.split(".").pop(-1));
+      });
+    }
+
     const num = randomNum(1, filteredImages.length);
 
-    if (filteredImages >= 0) {
-      return msg.channel.send("Ingen billeder <:pepehands:538114405838225409>");
+    if (filteredImages >= 0 || filteredImages === undefined) {
+      return msg.channel.send(
+        "Ingen billeder fra bot <:pepehands:538114405838225409>"
+      );
     } else {
-      return msg.channel.send(image.data.children[num].data.url);
+      const img = filteredImages[num].data.url;
+      return msg.channel.send(img);
     }
   }
 };
