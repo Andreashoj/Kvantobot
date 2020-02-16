@@ -96,7 +96,12 @@ const data = {
         "El Bruno es grande und stærk <:omega_bruno:426832042160947211>",
         "Hello gentlemen, my Bruno's been acting rather hard today <:omega_bruno:426832042160947211>",
         "Hård er min Bruno <:omega_bruno:426832042160947211>",
-        "At have eller ikke at have en hård Bruno <:omega_bruno:426832042160947211>"
+        "At have eller ikke at have en hård Bruno <:omega_bruno:426832042160947211>",
+        "I horisonten ses en hård Bruno <:omega_bruno:426832042160947211>",
+        "Boller og hård Bruno <:omega_bruno:426832042160947211>",
+        "Here we see a Bruno in its natural form, hard <:omega_bruno:426832042160947211>",
+        "Rødgrød med hård Bruno <:omega_bruno:426832042160947211>",
+        "Ey cuh, my Bruno's been trippin lately, he be mad hard <:omega_bruno:426832042160947211>"
       ]
     }
   ]

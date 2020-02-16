@@ -4,6 +4,7 @@ const Discord = require("discord.js");
 const data = require("./data/index.js");
 const bot = new Discord.Client();
 const commands = require("./commands");
+const gamble = require("./gamble/index.js");
 
 const environment = process.env.NODE_ENV;
 
@@ -12,14 +13,18 @@ const token =
     ? process.env.DISCORD_TOKEN
     : process.env.DC_TOKEN;
 
-bot.on("ready", () => {
+bot.on("ready", async () => {
   console.log("Kvantobot online");
+  // Create function that attaches points to a user and saves that user to the database
+  // Get all channel members ID's first
+  const guild = await bot.guilds.get("228187454182522881");
+  const users = gamble.getUsers(guild);
 });
 
 bot.on("message", msg => commands(msg));
 
 // Scheduled gaming forecast
-cron.schedule("00 00 14 * * *", () => {
+cron.schedule("00 00 10 * * *", () => {
   randomForecast = parseInt(
     Math.random() * Math.floor(data.gamingForecast.length)
   );
