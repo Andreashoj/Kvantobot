@@ -88,13 +88,17 @@ const data = {
     "Læs en bog.",
     "Ingen gaming før aftensmaden"
   ],
-  bruno: [
-    "Mein Bruno bist Hoar <:omega_bruno:426832042160947211>",
-    "Min Bruno er hård <:omega_bruno:426832042160947211>",
-    "El Bruno es grande und stærk <:omega_bruno:426832042160947211>",
-    "Hello gentlemen, my Bruno's been acting rather hard today <:omega_bruno:426832042160947211>",
-    "Hård er min Bruno <:omega_bruno:426832042160947211>",
-    "At have eller ikke at have en hård Bruno <:omega_bruno:426832042160947211>"
+  kvantoMember: [
+    {
+      bruno: [
+        "Mein Bruno bist Hoar <:omega_bruno:426832042160947211>",
+        "Min Bruno er hård <:omega_bruno:426832042160947211>",
+        "El Bruno es grande und stærk <:omega_bruno:426832042160947211>",
+        "Hello gentlemen, my Bruno's been acting rather hard today <:omega_bruno:426832042160947211>",
+        "Hård er min Bruno <:omega_bruno:426832042160947211>",
+        "At have eller ikke at have en hård Bruno <:omega_bruno:426832042160947211>"
+      ]
+    }
   ]
 };
 
