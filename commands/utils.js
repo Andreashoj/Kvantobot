@@ -26,6 +26,8 @@ function handleImage(args) {
     .catch(e => console.log(e));
 }
 
+// Command functions
+
 const getQuote = msg => {
   const randomQuote = Math.floor(
     Math.random() * Math.floor(data.quotes.length)
@@ -72,7 +74,6 @@ const getImage = async msg => {
   if (!image.error) {
     filteredImages = image.data.children.filter(image => {
       const types = ["jpg", "jpeg", "gif", "png", "gifv"];
-
       return types.indexOf(image.data.url.split(".").pop(-1)) !== -1;
     });
   }

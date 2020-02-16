@@ -1,12 +1,12 @@
 const command = require("./utils.js");
 
-function randomNum(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
 const commands = async msg => {
   if (msg.content === "hvor bor fuglene?") {
     msg.reply("I GENBRUGSBUTIKKEN!");
+  }
+
+  if (msg.content === "!bruno") {
+    msg.reply("Min Bruno er hård <:omega_bruno:426832042160947211>");
   }
 
   // Random Quote
