@@ -17,8 +17,8 @@ bot.on("ready", async () => {
   console.log("Kvantobot online");
   // Create function that attaches points to a user and saves that user to the database
   // Get all channel members ID's first
-  const guild = await bot.guilds.get("228187454182522881");
-  const users = gamble.getUsers(guild);
+  // const guild = await bot.guilds.get("228187454182522881");
+  // const users = gamble.getUsers(guild);
 });
 
 bot.on("message", msg => commands(msg));

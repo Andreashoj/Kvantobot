@@ -89,7 +89,7 @@ const getImage = async msg => {
 };
 
 const getBruno = msg => {
-  msg.channel.send(data.kvantoMember[randomNum(0, 6)]);
+  msg.channel.send(data.kvantoMember.bruno[randomNum(0, 6)]);
 };
 
 exports.getQuote = getQuote;
