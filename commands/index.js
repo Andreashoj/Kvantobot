@@ -22,7 +22,9 @@ function randomNum(min, max) {
 }
 
 function handleImage(args) {
-  return fetch(`https://reddit.com/r/${args}.json`).then(data => data.json());
+  return fetch(`https://reddit.com/r/${args}.json`)
+    .then(data => data.json())
+    .catch(e => console.log(e));
 }
 
 const commands = async msg => {
@@ -91,13 +93,12 @@ const commands = async msg => {
     if (!image.error) {
       filteredImages = image.data.children.filter(image => {
         const types = ["jpg", "jpeg", "gif", "png", "gifv"];
-        return !types.indexOf(image.data.url.split(".").pop(-1));
+
+        return types.indexOf(image.data.url.split(".").pop(-1)) !== -1;
       });
     }
-
-    const num = randomNum(1, filteredImages.length);
-
-    if (filteredImages >= 0 || filteredImages === undefined) {
+    const num = randomNum(0, filteredImages.length);
+    if (filteredImages.length === 0) {
       return msg.channel.send(
         "Ingen billeder fra bot <:pepehands:538114405838225409>"
       );
