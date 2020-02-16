@@ -6,7 +6,7 @@ const commands = async msg => {
   }
 
   if (msg.content === "!bruno") {
-    msg.channel.send("Min Bruno er hård <:omega_bruno:426832042160947211>");
+    command.getBruno(msg);
   }
 
   // Random Quote

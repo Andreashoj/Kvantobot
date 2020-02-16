@@ -88,8 +88,13 @@ const getImage = async msg => {
   }
 };
 
+const getBruno = msg => {
+  msg.channel.send(data.bruno[randomNum(0, 6)]);
+};
+
 exports.getQuote = getQuote;
 exports.getSize = getSize;
 exports.getSnap = getSnap;
 exports.getRaffle = getRaffle;
 exports.getImage = getImage;
+exports.getBruno = getBruno;
