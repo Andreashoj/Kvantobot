@@ -47,7 +47,7 @@ const getSize = msg => {
 };
 
 const getSnap = msg => {
-  const randomPic = randomNum(1, 128);
+  const randomPic = randomNum(0, 127);
 
   msg.channel
     .send("", {
@@ -94,9 +94,14 @@ const getBruno = msg => {
   );
 };
 
+const getNickname = msg => {
+  msg.member.setNickname(msg.content.replace("changeNick ", ""));
+};
+
 exports.getQuote = getQuote;
 exports.getSize = getSize;
 exports.getSnap = getSnap;
 exports.getRaffle = getRaffle;
 exports.getImage = getImage;
 exports.getBruno = getBruno;
+exports.getNickname = getNickname;

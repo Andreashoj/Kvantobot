@@ -20,7 +20,7 @@ const data = {
     },
     { quote: "Det er totalt irrelegyldigt", quoteson: "Komo" },
     { quote: "Kagen går ikke altid efter dine fodspor", quoteson: "Komo" },
-    { quote: "Jeg så en mand der viste sin penus...", quoteson: "Komo" },
+    { quote: "Jeg så en mand der viste sin penus...", quoteson: "Brandt" },
     { quote: "Det sgu da Knaldkuglen", quoteson: "Anz" },
     { quote: "Sandheden er true", quoteson: "Komo" },
     {

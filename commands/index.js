@@ -43,6 +43,11 @@ const commands = async msg => {
   if (msg.content.startsWith("!image")) {
     command.getImage(msg);
   }
+
+  // Set nickname
+  if (msg.content === "!nickname") {
+    command.getNickname(msg);
+  }
 };
 
 module.exports = commands;
