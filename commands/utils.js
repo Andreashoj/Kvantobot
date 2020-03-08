@@ -8,8 +8,18 @@ function randomNum(min, max) {
 
 function penisComment(penisSize) {
   let comment = "";
-
-  if (penisSize <= 5) {
+  if (penisSize === 1) {
+    return (comment =
+      "Tillykke! Du har formået det umulige, din penis er officielt 14  gange mindre end komo's, og det siger lidt <:pepelaugh:609080105695838234>");
+  } else if (penisSize === 2) {
+    return (comment =
+      "Selv min nye kikkert har svært ved at få øje på den lille ostereje <:pepelaugh:609080105695838234>");
+  } else if (penisSize === 3) {
+    return (comment = "Sikke en sød lille ven du har dig der :)");
+  } else if (penisSize === 4) {
+    return (comment =
+      "SELV ASIATERNE LIGNER HULK I FORHOLD TIL DIG <:omegalul:420997226446323732>");
+  } else if (penisSize === 5) {
     return (comment =
       "NURGH EN LIL DVÆRGHAMSTER <:omegalul:420997226446323732>");
   } else if (penisSize <= 7 && penisSize >= 6) {
@@ -45,11 +55,20 @@ const getQuote = msg => {
 
 const getSize = msg => {
   const randomDe = Math.floor(Math.random() * (9 - 1 + 1) + 1);
-  const penisSize = randomNum(5, 26);
+  const randomLowerNum = randomNum(1, 100);
+  let penisSize = "";
 
-  msg.reply(
-    `Din penis er ${penisSize}.${randomDe} cm. ${penisComment(penisSize)}`
-  );
+  if (randomLowerNum < 5) {
+    penisSize = randomNum(0, 5);
+    msg.reply(
+      `Din penis er ${penisSize}.${randomDe} cm. ${penisComment(penisSize)}`
+    );
+  } else {
+    penisSize = randomNum(5, 26);
+    msg.reply(
+      `Din penis er ${penisSize}.${randomDe} cm. ${penisComment(penisSize)}`
+    );
+  }
 };
 
 const getSnap = msg => {
