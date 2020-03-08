@@ -48,6 +48,11 @@ const commands = async msg => {
   if (msg.content === "!nickname") {
     command.getNickname(msg);
   }
+
+  // WHO ?
+  if (msg.content === "!who") {
+    command.getWho(msg);
+  }
 };
 
 module.exports = commands;

@@ -6,7 +6,6 @@ const getUsers = async guild => {
   const usersIds = users.members
     .map(r => r.user)
     .filter(user => user.bot !== true);
-  console.log(usersIds);
   return usersIds;
 };
 

@@ -39,7 +39,7 @@ const getQuote = msg => {
 
 const getSize = msg => {
   const randomDe = Math.floor(Math.random() * (9 - 1 + 1) + 1);
-  const penisSize = randomNum(5, 25);
+  const penisSize = randomNum(5, 26);
 
   msg.reply(
     `Din penis er ${penisSize}.${randomDe} cm. ${penisComment(penisSize)}`
@@ -98,6 +98,14 @@ const getNickname = msg => {
   msg.member.setNickname(msg.content.replace("changeNick ", ""));
 };
 
+const getWho = msg => {
+  const kvanto = ["ANZ", "BRANDT", "BRUNO", "KOMO"];
+  const num = randomNum(0, 4);
+  const comment = `${kvanto[num]} WH<:omegalul:686247902875484170>`;
+
+  msg.channel.send(comment);
+};
+
 exports.getQuote = getQuote;
 exports.getSize = getSize;
 exports.getSnap = getSnap;
@@ -105,3 +113,4 @@ exports.getRaffle = getRaffle;
 exports.getImage = getImage;
 exports.getBruno = getBruno;
 exports.getNickname = getNickname;
+exports.getWho = getWho;
