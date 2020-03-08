@@ -100,8 +100,8 @@ const getNickname = msg => {
 
 const getWho = msg => {
   const kvanto = ["ANZ", "BRANDT", "BRUNO", "KOMO"];
-  const num = randomNum(0, 4);
-  const comment = `${kvanto[num]} WH<:omegalul:686247902875484170>`;
+  const num = randomNum(0, 3);
+  const comment = `${kvanto[num]} WH <:omegalul:686247902875484170>?`;
 
   msg.channel.send(comment);
 };
