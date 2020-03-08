@@ -8,15 +8,21 @@ function randomNum(min, max) {
 
 function penisComment(penisSize) {
   let comment = "";
-  if (penisSize <= 7) {
+
+  if (penisSize <= 5) {
+    return (comment =
+      "NURGH EN LIL DVÆRGHAMSTER <:omegalul:420997226446323732>");
+  } else if (penisSize <= 7 && penisSize >= 6) {
     return (comment =
       "Damerne ved literally ikke når du enter the cave.. <:pepehands:538114405838225409>");
   } else if (penisSize >= 8 && penisSize <= 14) {
     return (comment = "oh nonono.. <:pepelaugh:609080105695838234>");
   } else if (penisSize >= 15 && penisSize <= 19) {
     return (comment = "Respect bro. <:brandt_damer:419964006913277962>");
-  } else if (penisSize >= 20) {
+  } else if (penisSize >= 20 && penisSize <= 24) {
     return (comment = "UGANDAN BROTHER! <:pog:538106737970905109>");
+  } else {
+    return (comment = "DEN DANSKE MANDINGO <:pog:538106737970905109>");
   }
 }
 
