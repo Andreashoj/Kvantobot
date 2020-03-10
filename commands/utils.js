@@ -3,7 +3,7 @@ const fetch = require("node-fetch");
 
 // Util functions
 function randomNum(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+  return Math.round(Math.random() * (max - min + 1) + min);
 }
 
 function penisComment(penisSize) {
