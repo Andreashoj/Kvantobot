@@ -33,4 +33,14 @@ cron.schedule("00 00 10 * * *", () => {
   );
 });
 
+cron.schedule("00 00 08 * * *", () => {
+  const channel = bot.channels.get("687204415563628602");
+
+  channel.send(`Godmorgen kvanto, lad os se hvad dagens meloner byder på`);
+
+  setTimeout(() => {
+    channel.send(`!image boobs`);
+  }, 3000);
+});
+
 bot.login(token).catch(e => console.log(e));
