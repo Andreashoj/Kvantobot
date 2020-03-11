@@ -53,6 +53,10 @@ const commands = async msg => {
   if (msg.content === "!who") {
     command.getWho(msg);
   }
+
+  if (msg.content === "!donate") {
+    command.getDonate(msg);
+  }
 };
 
 module.exports = commands;

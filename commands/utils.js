@@ -131,6 +131,12 @@ const getWho = msg => {
   msg.channel.send(comment);
 };
 
+const getDonate = msg => {
+  msg.channel.send(
+    "Donate to my creator https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LJ25W37PPK4RU&source=url <3"
+  );
+};
+
 exports.getQuote = getQuote;
 exports.getSize = getSize;
 exports.getSnap = getSnap;
@@ -139,3 +145,4 @@ exports.getImage = getImage;
 exports.getBruno = getBruno;
 exports.getNickname = getNickname;
 exports.getWho = getWho;
+exports.getDonate = getDonate;
