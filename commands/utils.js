@@ -96,10 +96,11 @@ const getImage = async msg => {
   const args = msg.content.split(" ").slice(1);
   console.log(args);
   if (
-    args.includes("hentai") ||
-    args.includes("rule34") ||
-    args.includes("overwatch") ||
-    args.includes("porn")
+    args[0].includes("hentai") ||
+    args[0].includes("rule34") ||
+    args[0].includes("overwatch") ||
+    args[0].includes("porn") ||
+    args[0].includes("ahegao")
   ) {
     return msg.channel.send("Not on my watch, bitch");
   }
