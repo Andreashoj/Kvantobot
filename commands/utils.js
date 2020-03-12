@@ -101,7 +101,22 @@ const getImage = async msg => {
     args[0].includes("rule34") ||
     args[0].includes("overwatch") ||
     args[0].includes("porn") ||
-    args[0].includes("ahegao")
+    args[0].includes("ahegao") ||
+    args[0].includes("guro") ||
+    args[0].includes("FeralYiff") ||
+    args[0].includes("OppaiLove") ||
+    args[0].includes("baramanga") ||
+    args[0].includes("futanari") ||
+    args[0].includes("Bleach_Hentai") ||
+    args[0].includes("Paizuri") ||
+    args[0].includes("Sukebei") ||
+    args[0].includes("yaoi") ||
+    args[0].includes("yuri") ||
+    args[0].includes("Lolicons") ||
+    args[0].includes("MonsterGirl") ||
+    args[0].includes("hentaibondage") ||
+    args[0].includes("doujinshi") ||
+    args[0].includes("ecchi") ||
   ) {
     return msg.channel.send("Not on my watch, bitch");
   }
