@@ -94,7 +94,7 @@ const getRaffle = msg => {
 
 const getImage = async msg => {
   const args = msg.content.split(" ").slice(1);
-  console.log(args);
+
   if (
     args[0].includes("hentai") ||
     args[0].includes("tai") ||
@@ -115,7 +115,6 @@ const getImage = async msg => {
     args[0].includes("Lolicons") ||
     args[0].includes("MonsterGirl") ||
     args[0].includes("hentaibondage") ||
-    args[0].includes("doujinshi") ||
     args[0].includes("ecchi") ||
     args[0].includes("34")
   ) {
