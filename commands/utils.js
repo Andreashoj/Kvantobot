@@ -118,7 +118,9 @@ const getImage = async msg => {
     args[0].includes("ecchi") ||
     args[0].includes("34")
   ) {
-    return msg.channel.send("Not on my watch, bitch");
+    return msg.channel.send(
+      "To unlock category donate 20kr to https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LJ25W37PPK4RU&source=url - with and type category name"
+    );
   }
 
   const image = await handleImage(args[0]);
