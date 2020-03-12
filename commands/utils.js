@@ -94,7 +94,13 @@ const getRaffle = msg => {
 
 const getImage = async msg => {
   const args = msg.content.split(" ").slice(1);
+
+  if (args.includes("hentai" || "rule34" || "porn" || "overwatch")) {
+    return msg.channel.send("Not on my watch, bitch");
+  }
+
   const image = await handleImage(args[0]);
+
   let filteredImages = [];
   if (!image.error) {
     filteredImages = image.data.children.filter(image => {
