@@ -95,7 +95,12 @@ const getRaffle = msg => {
 const getImage = async msg => {
   const args = msg.content.split(" ").slice(1);
 
-  if (args.includes("hentai" || "rule34" || "porn" || "overwatch")) {
+  if (
+    args.includes("hentai") ||
+    args.includes("rule34") ||
+    args.includes("overwatch") ||
+    args.includes("porn")
+  ) {
     return msg.channel.send("Not on my watch, bitch");
   }
 
