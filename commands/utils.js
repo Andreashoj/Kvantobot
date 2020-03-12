@@ -117,7 +117,7 @@ const getImage = async msg => {
     args[0].includes("hentaibondage") ||
     args[0].includes("doujinshi") ||
     args[0].includes("ecchi") ||
-    args[0].includes("34") ||
+    args[0].includes("34")
   ) {
     return msg.channel.send("Not on my watch, bitch");
   }
