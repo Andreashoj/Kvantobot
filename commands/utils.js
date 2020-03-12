@@ -95,30 +95,30 @@ const getRaffle = msg => {
 const getImage = async msg => {
   const args = msg.content.split(" ").slice(1);
 
-  const checkWord = args.toUpperCase();
+  const checkWord = args[0].toUpperCase();
 
   if (
-    checkWord.toUpperCase().includes("HENTAI") ||
-    checkWord.toUpperCase().includes("TAI") ||
-    checkWord.toUpperCase().includes("RULE34") ||
-    checkWord.toUpperCase().includes("OVERWATCH") ||
-    checkWord.toUpperCase().includes("PORN") ||
-    checkWord.toUpperCase().includes("AHEGO") ||
-    checkWord.toUpperCase().includes("GURO") ||
-    checkWord.toUpperCase().includes("FERALYIFF") ||
-    checkWord.toUpperCase().includes("OPPAILOVE") ||
-    checkWord.toUpperCase().includes("BARAMANGA") ||
-    checkWord.toUpperCase().includes("FUTANARI") ||
-    checkWord.toUpperCase().includes("PAIZURI") ||
-    checkWord.toUpperCase().includes("SUKEBEI") ||
-    checkWord.toUpperCase().includes("YAOI") ||
-    checkWord.toUpperCase().includes("YURI") ||
-    checkWord.toUpperCase().includes("LOLICONS") ||
-    checkWord.toUpperCase().includes("MONSTERGIRLS") ||
-    checkWord.toUpperCase().includes("HENTAIBONDAGE") ||
-    checkWord.toUpperCase().includes("ECCHI") ||
-    checkWord.toUpperCase().includes("SLIMEGIRLS") ||
-    checkWord.toUpperCase().includes("34")
+    checkWord.includes("HENTAI") ||
+    checkWord.includes("TAI") ||
+    checkWord.includes("RULE34") ||
+    checkWord.includes("OVERWATCH") ||
+    checkWord.includes("PORN") ||
+    checkWord.includes("AHEGO") ||
+    checkWord.includes("GURO") ||
+    checkWord.includes("FERALYIFF") ||
+    checkWord.includes("OPPAILOVE") ||
+    checkWord.includes("BARAMANGA") ||
+    checkWord.includes("FUTANARI") ||
+    checkWord.includes("PAIZURI") ||
+    checkWord.includes("SUKEBEI") ||
+    checkWord.includes("YAOI") ||
+    checkWord.includes("YURI") ||
+    checkWord.includes("LOLICONS") ||
+    checkWord.includes("MONSTERGIRLS") ||
+    checkWord.includes("HENTAIBONDAGE") ||
+    checkWord.includes("ECCHI") ||
+    checkWord.includes("SLIMEGIRLS") ||
+    checkWord.includes("34")
   ) {
     return msg.channel.send(
       "To unlock category donate 20kr to https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LJ25W37PPK4RU&source=url - with category name :) "
