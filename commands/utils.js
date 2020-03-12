@@ -94,7 +94,7 @@ const getRaffle = msg => {
 
 const getImage = async msg => {
   const args = msg.content.split(" ").slice(1);
-
+  console.log(args);
   if (
     args.includes("hentai") ||
     args.includes("rule34") ||
