@@ -119,7 +119,7 @@ const getImage = async msg => {
     args[0].includes("34")
   ) {
     return msg.channel.send(
-      "To unlock category donate 20kr to https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LJ25W37PPK4RU&source=url - with and type category name"
+      "To unlock category donate 20kr to https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LJ25W37PPK4RU&source=url - with category name :) "
     );
   }
 
