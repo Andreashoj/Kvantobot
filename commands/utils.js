@@ -95,29 +95,30 @@ const getRaffle = msg => {
 const getImage = async msg => {
   const args = msg.content.split(" ").slice(1);
 
+  const checkWord = args.toUpperCase();
+
   if (
-    args[0].includes("hentai") ||
-    args[0].includes("tai") ||
-    args[0].includes("rule34") ||
-    args[0].includes("overwatch") ||
-    args[0].includes("porn") ||
-    args[0].includes("ahegao") ||
-    args[0].includes("guro") ||
-    args[0].includes("FeralYiff") ||
-    args[0].includes("OppaiLove") ||
-    args[0].includes("baramanga") ||
-    args[0].includes("futanari") ||
-    args[0].includes("Bleach_Hentai") ||
-    args[0].includes("Paizuri") ||
-    args[0].includes("Sukebei") ||
-    args[0].includes("yaoi") ||
-    args[0].includes("yuri") ||
-    args[0].includes("Lolicons") ||
-    args[0].includes("MonsterGirl") ||
-    args[0].includes("hentaibondage") ||
-    args[0].includes("ecchi") ||
-    args[0].includes("slimegirls") ||
-    args[0].includes("34")
+    checkWord.toUpperCase().includes("HENTAI") ||
+    checkWord.toUpperCase().includes("TAI") ||
+    checkWord.toUpperCase().includes("RULE34") ||
+    checkWord.toUpperCase().includes("OVERWATCH") ||
+    checkWord.toUpperCase().includes("PORN") ||
+    checkWord.toUpperCase().includes("AHEGO") ||
+    checkWord.toUpperCase().includes("GURO") ||
+    checkWord.toUpperCase().includes("FERALYIFF") ||
+    checkWord.toUpperCase().includes("OPPAILOVE") ||
+    checkWord.toUpperCase().includes("BARAMANGA") ||
+    checkWord.toUpperCase().includes("FUTANARI") ||
+    checkWord.toUpperCase().includes("PAIZURI") ||
+    checkWord.toUpperCase().includes("SUKEBEI") ||
+    checkWord.toUpperCase().includes("YAOI") ||
+    checkWord.toUpperCase().includes("YURI") ||
+    checkWord.toUpperCase().includes("LOLICONS") ||
+    checkWord.toUpperCase().includes("MONSTERGIRLS") ||
+    checkWord.toUpperCase().includes("HENTAIBONDAGE") ||
+    checkWord.toUpperCase().includes("ECCHI") ||
+    checkWord.toUpperCase().includes("SLIMEGIRLS") ||
+    checkWord.toUpperCase().includes("34")
   ) {
     return msg.channel.send(
       "To unlock category donate 20kr to https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LJ25W37PPK4RU&source=url - with category name :) "
