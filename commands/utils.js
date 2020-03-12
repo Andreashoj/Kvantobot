@@ -116,6 +116,7 @@ const getImage = async msg => {
     args[0].includes("MonsterGirl") ||
     args[0].includes("hentaibondage") ||
     args[0].includes("ecchi") ||
+    args[0].includes("slimegirls") ||
     args[0].includes("34")
   ) {
     return msg.channel.send(
