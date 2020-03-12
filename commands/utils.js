@@ -97,6 +97,7 @@ const getImage = async msg => {
   console.log(args);
   if (
     args[0].includes("hentai") ||
+    args[0].includes("tai") ||
     args[0].includes("rule34") ||
     args[0].includes("overwatch") ||
     args[0].includes("porn") ||
