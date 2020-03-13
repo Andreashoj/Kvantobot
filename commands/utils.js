@@ -95,36 +95,6 @@ const getRaffle = msg => {
 const getImage = async msg => {
   const args = msg.content.split(" ").slice(1);
 
-  const checkWord = args[0].toUpperCase();
-
-  if (
-    checkWord.includes("HENTAI") ||
-    checkWord.includes("TAI") ||
-    checkWord.includes("RULE34") ||
-    checkWord.includes("OVERWATCH") ||
-    checkWord.includes("PORN") ||
-    checkWord.includes("AHEGO") ||
-    checkWord.includes("GURO") ||
-    checkWord.includes("FERALYIFF") ||
-    checkWord.includes("OPPAILOVE") ||
-    checkWord.includes("BARAMANGA") ||
-    checkWord.includes("FUTANARI") ||
-    checkWord.includes("PAIZURI") ||
-    checkWord.includes("SUKEBEI") ||
-    checkWord.includes("YAOI") ||
-    checkWord.includes("YURI") ||
-    checkWord.includes("LOLICONS") ||
-    checkWord.includes("MONSTERGIRLS") ||
-    checkWord.includes("HENTAIBONDAGE") ||
-    checkWord.includes("ECCHI") ||
-    checkWord.includes("SLIMEGIRLS") ||
-    checkWord.includes("34")
-  ) {
-    return msg.channel.send(
-      "To unlock category donate 20kr to https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LJ25W37PPK4RU&source=url - with category name :) "
-    );
-  }
-
   const image = await handleImage(args[0]);
 
   let filteredImages = [];
