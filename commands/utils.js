@@ -145,7 +145,7 @@ const getPercantage = msg => {
   msg.channel.send(`Udregner.. <:brandt_smart:419959960839913483>`);
 
   setTimeout(() => {
-    msg.channel.send(`Hmm, procenten er ${perc}!`);
+    msg.channel.send(`Hmm, procenten er ${perc}%`);
   }, 3000);
 };
 
