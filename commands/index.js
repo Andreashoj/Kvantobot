@@ -57,6 +57,10 @@ const commands = async msg => {
   if (msg.content === "!donate") {
     command.getDonate(msg);
   }
+
+  if (msg.content === "!perc") {
+    command.getDonate(msg);
+  }
 };
 
 module.exports = commands;

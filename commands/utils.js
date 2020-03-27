@@ -139,6 +139,16 @@ const getDonate = msg => {
   );
 };
 
+const getPercantage = msg => {
+  const perc = randomNum(0, 100);
+
+  msg.channel.send(`Udregner.. <:brandt_smart:419959960839913483>`);
+
+  setTimeout(() => {
+    msg.channel.send(`Hmm, procenten er ${perc}!`);
+  }, 3000);
+};
+
 exports.getQuote = getQuote;
 exports.getSize = getSize;
 exports.getSnap = getSnap;
@@ -148,3 +158,4 @@ exports.getBruno = getBruno;
 exports.getNickname = getNickname;
 exports.getWho = getWho;
 exports.getDonate = getDonate;
+exports.getPercantage = getPercantage;
