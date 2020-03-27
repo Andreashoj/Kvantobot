@@ -59,7 +59,7 @@ const commands = async msg => {
   }
 
   if (msg.content === "!perc") {
-    command.getDonate(msg);
+    command.getPercantage(msg);
   }
 };
 
