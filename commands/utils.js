@@ -38,13 +38,13 @@ function penisComment(penisSize) {
 
 function handleImage(args) {
   return fetch(`https://reddit.com/r/${args}.json`)
-    .then(data => data.json())
-    .catch(e => console.log(e));
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
 }
 
 // Command functions
 
-const getQuote = msg => {
+const getQuote = (msg) => {
   const randomQuote = Math.floor(
     Math.random() * Math.floor(data.quotes.length)
   );
@@ -53,7 +53,7 @@ const getQuote = msg => {
   );
 };
 
-const getSize = msg => {
+const getSize = (msg) => {
   const randomDe = Math.floor(Math.random() * (9 - 1 + 1) + 1);
   const randomLowerNum = randomNum(1, 100);
   let penisSize = "";
@@ -71,17 +71,17 @@ const getSize = msg => {
   }
 };
 
-const getSnap = msg => {
-  const randomPic = randomNum(0, 127);
+const getSnap = (msg) => {
+  const randomPic = randomNum(0, 188);
 
   msg.channel
     .send("", {
-      files: [`assets/dc_snap/kvanto_${randomPic}.jpeg`]
+      files: [`assets/dc_snap/kvanto_${randomPic}.jpeg`],
     })
-    .catch(e => console.log(e));
+    .catch((e) => console.log(e));
 };
 
-const getRaffle = msg => {
+const getRaffle = (msg) => {
   const args = msg.content.split(" ").slice(1);
   var item = args[Math.floor(Math.random() * args.length)];
 
@@ -92,14 +92,14 @@ const getRaffle = msg => {
   }, 3000);
 };
 
-const getImage = async msg => {
+const getImage = async (msg) => {
   const args = msg.content.split(" ").slice(1);
 
   const image = await handleImage(args[0]);
 
   let filteredImages = [];
   if (!image.error) {
-    filteredImages = image.data.children.filter(image => {
+    filteredImages = image.data.children.filter((image) => {
       const types = ["jpg", "jpeg", "gif", "png", "gifv"];
       return types.indexOf(image.data.url.split(".").pop(-1)) !== -1;
     });
@@ -115,17 +115,17 @@ const getImage = async msg => {
   }
 };
 
-const getBruno = msg => {
+const getBruno = (msg) => {
   msg.channel.send(
     data.kvantoMember.bruno[randomNum(0, data.kvantoMember.bruno.length)]
   );
 };
 
-const getNickname = msg => {
+const getNickname = (msg) => {
   msg.member.setNickname(msg.content.replace("changeNick ", ""));
 };
 
-const getWho = msg => {
+const getWho = (msg) => {
   const kvanto = ["ANZ", "BRANDT", "BRUNO", "KOMO", "NICKU"];
   const num = randomNum(0, 4);
   const comment = `${kvanto[num]} WH<:omegalul:420997226446323732>?`;
@@ -133,13 +133,13 @@ const getWho = msg => {
   msg.channel.send(comment);
 };
 
-const getDonate = msg => {
+const getDonate = (msg) => {
   msg.channel.send(
     "Donate to my creator https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LJ25W37PPK4RU&source=url <3"
   );
 };
 
-const getPercantage = msg => {
+const getPercantage = (msg) => {
   const perc = randomNum(0, 100);
   msg.channel.send(`Udregner.. <:brandt_smart:419959960839913483>`);
 
