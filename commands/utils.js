@@ -141,7 +141,6 @@ const getDonate = msg => {
 
 const getPercantage = msg => {
   const perc = randomNum(0, 100);
-
   msg.channel.send(`Udregner.. <:brandt_smart:419959960839913483>`);
 
   setTimeout(() => {
