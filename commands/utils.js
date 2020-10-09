@@ -57,6 +57,8 @@ const getSize = (msg) => {
   const randomDe = Math.floor(Math.random() * (9 - 1 + 1) + 1);
   const randomLowerNum = randomNum(1, 100);
   let penisSize = "";
+  
+  console.log(msg)
 
   if (randomLowerNum < 5) {
     penisSize = randomNum(0, 5);
