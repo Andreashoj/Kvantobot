@@ -101,8 +101,9 @@ const data = {
       "Here we see a Bruno in its natural form, hard <:omega_bruno:426832042160947211>",
       "Rødgrød med hård Bruno <:omega_bruno:426832042160947211>",
       "Ey cuh, my Bruno's been trippin lately, he be mad hard <:omega_bruno:426832042160947211>"
-    ]
-  }
+    ],
+  },
+  members: ['Anz', 'Bruno', 'Nicku-chan UwU', 'Komo', 'Brandt']
 };
 
 module.exports = data;

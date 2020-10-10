@@ -61,6 +61,10 @@ const commands = async msg => {
   if (msg.content === "!perc") {
     command.getPercantage(msg);
   }
+
+  if (msg.content === "!shot") {
+    command.getShot(msg)
+  }
 };
 
 module.exports = commands;

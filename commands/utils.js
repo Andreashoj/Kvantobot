@@ -120,10 +120,39 @@ const getImage = async (msg) => {
   }
 };
 
+const getShot = (msg) => {
+  const randomNumber = randomNum(0, 100);
+  const kvantoMember = randomNum(0, 5);
+
+  if(randomNumber > 50) {
+    msg.reply(
+      `Bare åben den flaske gamle.`
+    )
+  } else {
+    msg.channel.send(
+      `Nååå, hvem skal ha en lil en...`
+    )
+    setTimeout(() => {
+      msg.channel.send(
+        `Det blev sgu ${data.members[kvantoMember]}!`
+      )
+    }, 3000)
+  }
+}
+
 const getBruno = (msg) => {
-  msg.channel.send(
-    data.kvantoMember.bruno[randomNum(0, data.kvantoMember.bruno.length)]
-  );
+  const decider = randomNum(0, 1);
+
+  if(decider === 0) {
+    msg.channel.send(
+      data.kvantoMember.bruno[randomNum(0, data.kvantoMember.bruno.length)]
+    );
+  } else {
+    msg.channel.send(
+      'who? <:yikes:538112912817127456>'
+    );
+  }
+
 };
 
 const getNickname = (msg) => {
@@ -163,3 +192,4 @@ exports.getNickname = getNickname;
 exports.getWho = getWho;
 exports.getDonate = getDonate;
 exports.getPercantage = getPercantage;
+exports.getShot = getShot;
