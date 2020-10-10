@@ -122,7 +122,7 @@ const getImage = async (msg) => {
 
 const getShot = (msg) => {
   const randomNumber = randomNum(0, 100);
-  const kvantoMember = randomNum(0, 5);
+  const kvantoMember = randomNum(0, 4);
 
   if(randomNumber > 50) {
     msg.reply(
