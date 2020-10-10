@@ -57,8 +57,13 @@ const getSize = (msg) => {
   const randomDe = Math.floor(Math.random() * (9 - 1 + 1) + 1);
   const randomLowerNum = randomNum(1, 100);
   let penisSize = "";
-  
-  console.log(msg)
+
+  if(msg.author.username === 'Andreas') {
+    penisSize = randomNum(25, 100);
+    msg.reply(
+      `Din penis er ${penisSize}.${randomDe} cm. Manifiquè.`
+    )
+  }
 
   if (randomLowerNum < 5) {
     penisSize = randomNum(0, 5);
