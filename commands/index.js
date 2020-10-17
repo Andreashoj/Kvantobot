@@ -65,6 +65,14 @@ const commands = async msg => {
   if (msg.content === "!shot") {
     command.getShot(msg)
   }
+
+  if(msg.mentions.members.first()) {
+    for (let [key, value] of msg.mentions.members) {
+      if(value.user.username === 'KvantoBot' || value.user.username === 'Andreas') {
+        msg.react('😍')
+      }
+    }
+  }
 };
 
 module.exports = commands;

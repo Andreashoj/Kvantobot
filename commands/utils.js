@@ -182,6 +182,10 @@ const getPercantage = (msg) => {
   }, 3000);
 };
 
+const getMention = (msg) => {
+  console.log(msg.mentions.members)
+}
+
 exports.getQuote = getQuote;
 exports.getSize = getSize;
 exports.getSnap = getSnap;
@@ -193,3 +197,4 @@ exports.getWho = getWho;
 exports.getDonate = getDonate;
 exports.getPercantage = getPercantage;
 exports.getShot = getShot;
+exports.getMention = getMention;
