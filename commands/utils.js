@@ -72,7 +72,7 @@ const getSize = (msg) => {
 };
 
 const getSnap = (msg) => {
-  const randomPic = randomNum(0, 188);
+  const randomPic = randomNum(0, 299);
 
   msg.channel
     .send("", {
