@@ -1,5 +1,7 @@
 const data = require("../data/index.js");
 const fetch = require("node-fetch");
+const fs = require("fs");
+const path = require("path");
 
 // Util functions
 function randomNum(min, max) {
@@ -74,11 +76,19 @@ const getSize = (msg) => {
 const getSnap = (msg) => {
   const randomPic = randomNum(0, 299);
 
-  msg.channel
-    .send("", {
-      files: [`assets/dc_snap/kvanto_${randomPic}.jpeg`],
-    })
-    .catch((e) => console.log(e));
+  const dirPath = path.join(__dirname, '../assets/dc_snap')
+  
+  fs.readdir(dirPath, (err, files) => {
+    if(err) {
+      console.log(err)
+    } 
+    
+    msg.channel
+      .send("", {
+        files: [`assets/dc_snap/${files[randomPic]}`],
+      })
+      .catch((e) => console.log(e));
+  })
 };
 
 const getRaffle = (msg) => {
