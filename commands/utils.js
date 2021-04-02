@@ -191,7 +191,7 @@ const getTodo = (msg) => {
   msg.channel.send(`Hmm, hvad mon den magiske krystal siger :robot: :crystal_ball:`);
   
   setTimeout(() => {
-    msg.channel.send(`En omgang: ${todo}`);
+    msg.channel.send(todo);
   }, 3000);
 };
 
