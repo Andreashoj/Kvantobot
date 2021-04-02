@@ -66,6 +66,10 @@ const commands = async msg => {
     command.getShot(msg)
   }
 
+  if (msg.content === "!todo") {
+    command.getTodo(msg)
+  }
+
   if(msg.mentions.members.first()) {
     for (let [key, value] of msg.mentions.members) {
       if(value.user.username === 'KvantoBot' || value.user.username === 'Andreas') {
