@@ -117,10 +117,9 @@ const data = {
     },
     {
       quote:
-        'Seriøst, hvad er en penis vibrator, og hvorfor har jeg aldrig hørt om den?',
-      quoteson: 'Nicku',
+        '"Seriøst, hvad er en penis vibrator, og hvorfor har jeg aldrig hørt om den?", "Er det ikke bare en PlayStation controller?"',
+      quoteson: 'Anz&Nicku-chan #UwU',
     },
-    { quote: 'Er det ikke bare en PlayStation controller?', quoteson: 'Anz' },
     { quote: 'Jeg skal cleane the rat ass', quoteson: 'Anz' },
     { quote: 'Den smager af røv', quoteson: 'Nickus første ord 2021' },
     {
