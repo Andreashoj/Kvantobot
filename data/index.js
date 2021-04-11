@@ -72,6 +72,66 @@ const data = {
       quote: 'Seriøst.. hvorfor sluger hun ikke mine svømmere?',
       quoteson: 'Anz',
     },
+    {
+      quote: 'Brandt, jeg tror det her værelse er klammere end fissehår',
+      quoteson: 'Kevin Artz',
+    },
+    {
+      quote: 'At sove, det er så dejligt. Så skal jeg ikke tænke over mit liv',
+      quoteson: 'komo',
+    },
+    {
+      quote: 'Når piger har blå øjne, så får jeg en hård diller',
+      quoteson: 'Anz',
+    },
+    {
+      quote:
+        'Bruno: "Jeg kommer til at sove som en drøm" - Anz: "Som Majbrit??"',
+      quotesonson: 'BnB',
+    },
+    { quote: 'Jeg har slet ikke nogen løg.', quoteson: 'kJacob Sirum Brandt' },
+    {
+      quote: 'Seriøst, jeg stikker min penis igennem min gaffatape lige nu',
+      quoteson: 'Anz Høj',
+    },
+    { quote: 'Kevin høj knepper små bør..', quoteson: 'komo høj' },
+    {
+      quote: 'Med den røv er det ligemeget om det er en mand',
+      quoteson: 'komo høj',
+    },
+    {
+      quote:
+        'Jeg synes til gengæld, at det er vold svært at gøre det på klunkerne',
+      quoteson: 'komo',
+    },
+    { quote: 'Pommes frites sjovs', quoteson: 'Anz' },
+    { quote: 'Jeg skal have pizza juleaften', quoteson: 'komo' },
+    {
+      quote:
+        'Det der er rent faktisk det mest indbydende røvhul, jeg nogensinde har set',
+      quoteson: 'Nicku',
+    },
+    {
+      quote: 'Man kan åbenbart lufte så meget ud at der kan komme svimmelsvamp',
+      quoteson: 'Anz',
+    },
+    {
+      quote:
+        'Seriøst, hvad er en penis vibrator, og hvorfor har jeg aldrig hørt om den?',
+      quoteson: 'Nicku',
+    },
+    { quote: 'Er det ikke bare en PlayStation controller?', quoteson: 'Anz' },
+    { quote: 'Jeg skal cleane the rat ass', quoteson: 'Anz' },
+    { quote: 'Den smager af røv', quoteson: 'Nickus første ord 2021' },
+    {
+      quote: 'Jeg er den perfekte granat, når man tænker over det',
+      quoteson: 'komo',
+    },
+    {
+      quote: 'sidder og ser videoer med mænd der glat barberer sig',
+      quoteson: 'Brandtigan 2021',
+    },
+    { quote: 'Jeg har ikke fappet siden 2012', quoteson: 'Anz' },
   ],
   gamingForecast: [
     'Wrap it up boys, gaming i dag ender i død og ulykke',
@@ -105,7 +165,7 @@ const data = {
   },
   members: ['Anz', 'Bruno', 'Nicku-chan UwU', 'Komo', 'Brandt'],
   todo: [
-    'Udtænk hvad menuen skal stå på i morgen. <:monner:419956766835736576> ?', 
+    'Udtænk hvad menuen skal stå på i morgen. <:monner:419956766835736576> ?',
     'Red sengen svamle',
     'Det gamle crib trænger vist til en omgang oprydning',
     'Bruv, tag nu den opvask',
@@ -122,6 +182,16 @@ const data = {
     'Kaf kaf kaf! Det er vist på tide til en lil én ;) ',
     'Find noget dope du vil købe :dollar:',
     'Gå en tur brother. De gamle stænger trænger vist til lidt bevægelse',
+    'komos mor <:monkalaugh:756840563914834010>',
+    'Quick power nap :sleeping:',
+    'Du er vist ikke opdateret! Læs nyhederne :newspaper:',
+    'SNACK RUN :heart_eyes:',
+    "En lil' quickie <:wurst:419965493189935115>",
+    'MONNER RUNNER <:monner:419956766835736576>',
+    'Få gjort det toilet rent, det er mere brunt end hvidt :toilet:',
+    "Fyr op for noget 80'er pop :microphone:",
+    'Find selv på noget <:bj_kongen:419960267066310656>',
+    'Inviter en Tinder dame på date <:brandt_damer:419964006913277962>',
   ],
 };
 

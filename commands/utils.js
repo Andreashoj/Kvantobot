@@ -74,7 +74,7 @@ const getSize = (msg) => {
 };
 
 const getSnap = (msg) => {
-  const randomPic = randomNum(0, 299);
+  const randomPic = randomNum(0, 393);
 
   const dirPath = path.join(__dirname, '../assets/dc_snap');
 
@@ -183,7 +183,7 @@ const getMention = (msg) => {
 };
 
 const getTodo = (msg) => {
-  const num = randomNum(0, 16);
+  const num = randomNum(0, 25);
 
   const todo = `${data.todo[num]}`;
   console.log(todo)
