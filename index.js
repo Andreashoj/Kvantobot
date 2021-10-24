@@ -10,9 +10,9 @@ const environment = process.env.NODE_ENV;
 
 bot.commands = new Discord.Collection();
 
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+const commandFiles = fs.readdirSync('./modules/').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
-  const command = require(`./commands/${file}`);
+  const command = require(`./modules/${file}`);
 
   if (command && command.name) {
     bot.commands.set(command.name, command);
