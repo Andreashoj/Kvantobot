@@ -1,5 +1,4 @@
 require('dotenv').config();
-require('./commands/play');
 const fs = require('fs');
 const cron = require('node-cron');
 const Discord = require('discord.js');
