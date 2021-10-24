@@ -1,23 +1,22 @@
 require('dotenv').config();
 const fs = require('fs');
 const cron = require('node-cron');
-const Discord = require('discord.js');
 const data = require('./data/index.js');
+const Discord = require('discord.js');
 const bot = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS'] });
-const commands = require('./commands');
 
 const environment = process.env.NODE_ENV;
 
 bot.commands = new Discord.Collection();
 
-// const commandFiles = fs.readdirSync('./modules/').filter(file => file.endsWith('.js'));
-// for (const file of commandFiles) {
-//   const command = require(`./modules/${file}`);
+const commandFiles = fs.readdirSync('./modules/').filter(file => file.endsWith('.js'));
+for (const file of commandFiles) {
+  const command = require(`./modules/${file}`);
 
-//   if (command && command.name) {
-//     bot.commands.set(command.name, command);
-//   }
-// }
+  if (command && command.name) {
+    bot.commands.set(command.name, command);
+  }
+}
 
 const token =
   environment === 'development'
@@ -33,21 +32,21 @@ bot.on('message', (msg) => commands(msg));
 // Music player
 const prefix = "!"
 
-// bot.on('message', msg => {
-//   if (!msg.content.startsWith(prefix) || msg.author.bot) return;
+bot.on('message', msg => {
+  if (!msg.content.startsWith(prefix) || msg.author.bot) return;
 
-//   const args = msg.content.slice(prefix.length).split(/ +/);
-//   const cmd = args.shift().toLowerCase();
+  const args = msg.content.slice(prefix.length).split(/ +/);
+  const cmd = args.shift().toLowerCase();
 
-//   const command = bot.commands.get(cmd) || bot.commands.find(a => a.aliases && a.aliases.includes(cmd));
+  const command = bot.commands.get(cmd) || bot.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-//   try {
-//     command.execute(msg, args, cmd, bot, Discord);
-//   } catch (err) {
-//     msg.reply("There was an error")
-//     console.log(err)
-//   }
-// })
+  try {
+    command.execute(msg, args, cmd, bot, Discord);
+  } catch (err) {
+    msg.reply("There was an error")
+    console.log(err)
+  }
+})
 
 // CRON jobs
 
