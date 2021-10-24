@@ -72,4 +72,4 @@ bot.on('message', (msg) => commands(msg));
 //   }, 3000);
 // });
 
-// bot.login(token).catch((e) => console.log(e));
+bot.login(token).catch((e) => console.log(e));
