@@ -16,8 +16,7 @@ function randomNum(min, max) {
 }
 
 const getSong = async (message, args, server_queue, voice_channel) => {
-  if (!args.length)
-    return message.channel.send(brandtDenial);
+  if (!args.length) return message.channel.send(brandtDenial);
   let song = {};
 
   //If the first argument is a link. Set the song object to have two keys. Title and URl.
@@ -67,7 +66,7 @@ const getSong = async (message, args, server_queue, voice_channel) => {
     }
   } else {
     server_queue.songs.push(song);
-    return message.channel.send(`${brandtDAMER} om i køen - **${song.title}**`);
+    return message.channel.send(`${brandtDAMER} - **${song.title}**`);
   }
 };
 
@@ -133,6 +132,6 @@ const skip_song = (message, server_queue) => {
 
 const stop_song = (message, server_queue) => {
   if (!message.member.voice.channel) return message.channel.send(brandtDenial);
-  server_queue.songs = [];
+  server_queue.skip_song = [];
   server_queue.connection.dispatcher.end();
 };
