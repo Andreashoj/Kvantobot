@@ -2,6 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const cron = require('node-cron');
 const data = require('./data/index.js');
+const commands = require('./commands');
 const Discord = require('discord.js');
 const bot = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS'] });
 
