@@ -33,21 +33,21 @@ bot.on('message', (msg) => commands(msg));
 // Music player
 const prefix = "!"
 
-bot.on('message', msg => {
-  if (!msg.content.startsWith(prefix) || msg.author.bot) return;
+// bot.on('message', msg => {
+//   if (!msg.content.startsWith(prefix) || msg.author.bot) return;
 
-  const args = msg.content.slice(prefix.length).split(/ +/);
-  const cmd = args.shift().toLowerCase();
+//   const args = msg.content.slice(prefix.length).split(/ +/);
+//   const cmd = args.shift().toLowerCase();
 
-  const command = bot.commands.get(cmd) || bot.commands.find(a => a.aliases && a.aliases.includes(cmd));
+//   const command = bot.commands.get(cmd) || bot.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-  try {
-    command.execute(msg, args, cmd, bot, Discord);
-  } catch (err) {
-    msg.reply("There was an error")
-    console.log(err)
-  }
-})
+//   try {
+//     command.execute(msg, args, cmd, bot, Discord);
+//   } catch (err) {
+//     msg.reply("There was an error")
+//     console.log(err)
+//   }
+// })
 
 // CRON jobs
 
