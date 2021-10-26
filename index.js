@@ -61,7 +61,7 @@ bot.on('message', msg => {
 // // CRON jobs
 
 // // Scheduled gaming forecast
-cron.schedule('00 00 9 * * *', () => {
+cron.schedule('0 0 11 * * ?', () => {
   randomForecast = parseInt(
     Math.random() * Math.floor(data.gamingForecast.length)
   );
@@ -71,7 +71,7 @@ cron.schedule('00 00 9 * * *', () => {
   );
 });
 
-cron.schedule('00 00 07 * * *', () => {
+cron.schedule('0 0 9 * * ?', () => {
   const channel = bot.channels.get('687204415563628602');
 
   channel.send(`Godmorgen kvanto, lad os se hvad dagens meloner byder på`);
