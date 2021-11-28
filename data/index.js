@@ -131,6 +131,91 @@ const data = {
       quoteson: 'Brandtigan 2021',
     },
     { quote: 'Jeg har ikke fappet siden 2012', quoteson: 'Anz' },
+    {
+      quote: 'Jeg har aldrig lavet pøller selv',
+      quoteson: 'Bruno H. <:omega_bruno:426832042160947211>',
+    },
+    {
+      quote: 'Gryn lærer en at deepthroat ',
+      quoteson: 'Anz Hoar <:mongo_anz:419967243263148043>',
+    },
+    {
+      quote: 'Hun må seriøst gerne babbe mit hul ',
+      quoteson: 'Andreas Løg <:kevin_flue:419964564373897227>',
+    },
+    {
+      quote: 'Du kan ikke stave Juster uden justérbar... nej omvendt ',
+      quoteson: 'Jacob "Dansk A" Serop',
+    },
+    {
+      quote: 'Sur-sød strømning ',
+      quoteson: 'Komo Høj',
+    },
+    {
+      quote: 'Actual factual ',
+      quoteson: 'Komo',
+    },
+    {
+      quote: 'Er der...... kvindelige heste?? ',
+      quoteson: 'Komo Høj <:omega_komo:420333834890903563>',
+    },
+    {
+      quote: 'Jeg glæder mig til, at jeg skal hjem og have Kanye peber ',
+      quoteson: 'Flemming',
+    },
+    {
+      quote: 'Jeg har lyst til at tage Ole bagi ',
+      quoteson: 'KomoTheCoomer',
+    },
+    {
+      quote: 'Hvordan kan et lille hul bløde så meget? ',
+      quoteson: 'Bruno fucking Høj',
+    },
+    {
+      quote: 'Min mors kusines søsters barn.. ',
+      quoteson: 'FlemmingEllevenIQ',
+    },
+    {
+      quote: 'Jeg har aldrig kørt drukbil ',
+      quoteson: 'KomoKappaHøj',
+    },
+    {
+      quote: 'Jeg vil gerne skyde en hjemløs med en sniper ',
+      quoteson: 'Bruno Høj',
+    },
+    {
+      quote: 'Brandt.. Skal vi kysse? ',
+      quoteson: 'KomoKappaPride',
+    },
+    {
+      quote: 'Du er så lækker Bruno, jeg vil tage dig hårdt bagfra ',
+      quoteson: 'Komo',
+    },
+    {
+      quote:
+        'Altså Anz.. det var sådan Albert Einstein opfandt teoret teorien ',
+      quoteson: 'KomoStein',
+    },
+    {
+      quote: 'Så er det sgu da en transfodit ',
+      quoteson: 'Anz Møg',
+    },
+    {
+      quote: 'Så kommer psykologogen ',
+      quoteson: 'Komo Gøj',
+    },
+    {
+      quote: 'Bruno, du glemmer, at det giver bedre immunforsmag ',
+      quoteson: 'Dr. Anz',
+    },
+    {
+      quote: 'Vi skal ind og tage dem i rumpetten og tage dem på rumslætten ',
+      quoteson: 'Komo the rumpet coomer',
+    },
+    {
+      quote: 'Seriøst, mine nuts sover ',
+      quoteson: 'Anz H.',
+    },
   ],
   gamingForecast: [
     'Wrap it up boys, gaming i dag ender i død og ulykke',
