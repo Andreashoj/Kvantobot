@@ -1,12 +1,17 @@
 require('dotenv').config();
 const fs = require('fs');
-const cron = require('node-cron');
-const data = require('./data/index.js');
+const schedule = require('node-schedule');
 const commands = require('./commands');
 const Discord = require('discord.js');
 const bot = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS'] });
+const cloudinary = require('cloudinary').v2
 
-const environment = process.env.NODE_ENV;
+
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
+})
 
 bot.commands = new Discord.Collection();
 
@@ -19,13 +24,10 @@ for (const file of commandFiles) {
   }
 }
 
-const token =
-  environment === 'development'
-    ? process.env.DISCORD_TOKEN
-    : process.env.DC_TOKEN;
+const token = process.env.DC_TOKEN
 
 bot.on('ready', async () => {
-  console.log('Kvantobot online');
+  console.log('Kvantobot ready for service')
 });
 
 bot.on('message', (msg) => commands(msg));
@@ -48,8 +50,6 @@ bot.on('message', msg => {
 
   const command = bot.commands.get(cmd) || bot.commands.find(a => a.aliases && a.aliases.includes(cmd));
 
-  console.log(args, hasArgs)
-
   try {
     command.execute(msg, args, cmd, bot, Discord);
   } catch (err) {
@@ -61,18 +61,18 @@ bot.on('message', msg => {
 // // CRON jobs
 
 // // Scheduled gaming forecast
-cron.schedule('00 00 9 * * *', () => {
-  randomForecast = parseInt(
-    Math.random() * Math.floor(data.gamingForecast.length)
-  );
-  const channel = bot.channels.get('228187454182522881');
-  channel.send(
-    `Dagens gaming horoskop lyder således..\n **${data.gamingForecast[randomForecast]}**`
-  );
-});
+// schedule.scheduleJob('00 00 9 * * *', () => {
+//   randomForecast = parseInt(
+//     Math.random() * Math.floor(data.gamingForecast.length)
+//   );
+//   const channel = bot.channels.cache.get('228187454182522881');
+//   channel.send(
+//     `Dagens gaming horoskop lyder således..\n **${data.gamingForecast[randomForecast]}**`
+//   );
+// });
 
-cron.schedule('00 00 07 * * *', () => {
-  const channel = bot.channels.get('687204415563628602');
+schedule.scheduleJob({ hour: 09, minute: 00 }, () => {
+  const channel = bot.channels.cache.get('687204415563628602');
 
   channel.send(`Godmorgen kvanto, lad os se hvad dagens meloner byder på`);
 
@@ -81,4 +81,4 @@ cron.schedule('00 00 07 * * *', () => {
   }, 3000);
 });
 
-bot.login(token).catch((e) => console.log(e));
+bot.login(token).catch((e) => console.log('error logging:', e));
