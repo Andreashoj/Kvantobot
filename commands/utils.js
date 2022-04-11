@@ -2,6 +2,7 @@ const data = require("../data/index.js");
 const fetch = require("node-fetch");
 const fs = require("fs");
 const path = require("path");
+const cloudinary = require('cloudinary').v2
 
 // Util functions
 function randomNum(min, max) {
@@ -74,21 +75,8 @@ const getSize = (msg) => {
 };
 
 const getSnap = (msg) => {
-  const randomPic = randomNum(0, 393);
-
-  const dirPath = path.join(__dirname, '../assets/dc_snap');
-
-  fs.readdir(dirPath, (err, files) => {
-    if (err) {
-      console.log(err);
-    }
-
-    msg.channel
-      .send('', {
-        files: [`assets/dc_snap/${files[randomPic]}`],
-      })
-      .catch((e) => console.log(e));
-  })
+  const url = cloudinary.url(`kvanto_${randomNum(0, 780)}`, {})
+  msg.channel.send(url)
 };
 
 const getRaffle = (msg) => {
