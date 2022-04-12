@@ -1,220 +1,266 @@
+const emotes = require('../data/emotes')
+
 const data = {
   quotes: [
     {
-      quote: 'Brandt, jeg tror det her værelse er klammere end fissehår',
-      quoteson: 'Komo Artz',
+      quote: `Brandt, jeg tror det her værelse er klammere end fissehår`,
+      quoteson: `Komo Artz`,
     },
     {
-      quote: 'Det ville seriøst være rart, hvis hele mellemøsten blev nuked',
-      quoteson: 'Brandtigan',
+      quote: `Det ville seriøst være rart, hvis hele mellemøsten blev nuked`,
+      quoteson: `Brandtigan`,
     },
-    { quote: 'Thousand needles dressing', quoteson: 'Komo Nielsen' },
-    { quote: 'Indimiderede jeg dig lidt på snappen?', quoteson: 'Bruno Høj' },
+    { quote: `Thousand needles dressing`, quoteson: `Komo Nielsen` },
+    { quote: `Indimiderede jeg dig lidt på snappen?`, quoteson: `Bruno Høj` },
     {
-      quote: 'Jeg kløgede mig i øret og fik et kill!',
-      quoteson: 'Anz "Top20blitzworldbtw" høj',
-    },
-    {
-      quote: 'Man er ikke en rigtig mand før man har prøvet en mand',
-      quoteson: 'Brandt',
-    },
-    { quote: 'Det er totalt irrelegyldigt', quoteson: 'Komo' },
-    { quote: 'Kagen går ikke altid efter dine fodspor', quoteson: 'Komo' },
-    { quote: 'Jeg så en mand der viste sin penus...', quoteson: 'Brandt' },
-    { quote: 'Det sgu da Knaldkuglen', quoteson: 'Anz' },
-    { quote: 'Sandheden er true', quoteson: 'Komo' },
-    {
-      quote: "Først ta'r jeg hende på kaffebar, så ta'r jeg hende på pølsen",
-      quoteson: 'Komo',
+      quote: `Jeg kløgede mig i øret og fik et kill!`,
+      quoteson: `Anz "Top20blitzworldbtw" høj`,
     },
     {
-      quote: 'Jeg var nede og købe en durum, og noget af dejen smagte af dej',
-      quoteson: 'Bruno',
+      quote: `Man er ikke en rigtig mand før man har prøvet en mand`,
+      quoteson: `Brandt`,
     },
-    { quote: 'jeg kan godt lid en god D', quoteson: 'anz' },
-    { quote: 'Jeg vil faktisk bare gerne doomFISTES', quoteson: 'Komo' },
-    { quote: 'Super sonic smash brothers', quoteson: 'Brandt' },
-    { quote: 'Bruno giv mig finger', quoteson: 'Anz' },
+    { quote: `Det er totalt irrelegyldigt`, quoteson: `Komo` },
+    { quote: `Kagen går ikke altid efter dine fodspor`, quoteson: `Komo` },
+    { quote: `Jeg så en mand der viste sin penus...`, quoteson: `Brandt` },
+    { quote: `Det sgu da Knaldkuglen`, quoteson: `Anz` },
+    { quote: `Sandheden er true`, quoteson: `Komo` },
     {
-      quote: 'Alle ved at tyskerne har forståelse overfor magt',
-      quoteson: 'Komo',
-    },
-    { quote: 'Prøv at tænk på hvis kage var usundt', quoteson: 'Komo' },
-    {
-      quote: 'Vi går efter de dårlige damer, de er sikre huller!',
-      quoteson: 'Anz',
+      quote: "Først ta`r jeg hende på kaffebar, så ta`r jeg hende på pølsen",
+      quoteson: `Komo`,
     },
     {
-      quote:
-        'Nøej, hvor vil jeg gerne have Karthus.. hårdt.... mellem ballerne',
-      quoteson: 'Anz',
+      quote: `Jeg var nede og købe en durum, og noget af dejen smagte af dej`,
+      quoteson: `Bruno`,
+    },
+    { quote: `jeg kan godt lid en god D`, quoteson: `anz` },
+    { quote: `Jeg vil faktisk bare gerne doomFISTES`, quoteson: `Komo` },
+    { quote: `Super sonic smash brothers`, quoteson: `Brandt` },
+    { quote: `Bruno giv mig finger`, quoteson: `Anz` },
+    {
+      quote: `Alle ved at tyskerne har forståelse overfor magt`,
+      quoteson: `Komo`,
+    },
+    { quote: `Prøv at tænk på hvis kage var usundt`, quoteson: `Komo` },
+    {
+      quote: `Vi går efter de dårlige damer, de er sikre huller!`,
+      quoteson: `Anz`,
     },
     {
       quote:
-        'Katte kunne i teorien godt slikke et gulvtæppe op, og så lave en hårbolle',
-      quoteson: 'komo',
+        `Nøej, hvor vil jeg gerne have Karthus.. hårdt.... mellem ballerne`,
+      quoteson: `Anz`,
     },
     {
       quote:
-        'Hvis jeg var en pige, ville jeg have, at fyren tog dip på sin penis',
-      quoteson: 'Brandt',
-    },
-    {
-      quote: 'Jeg tror, jeg går på dagplejehjælp, kontanthjælp....',
-      quoteson: 'Komo',
-    },
-    { quote: 'Hvor kan man få lamme-kotte-lotte henne?', quoteson: 'Komo' },
-    {
-      quote: 'Jeg har lyst til at skyde en klat jizz ud af vinduet',
-      quoteson: 'Anz',
-    },
-    {
-      quote: 'Seriøst.. hvorfor sluger hun ikke mine svømmere?',
-      quoteson: 'Anz',
-    },
-    {
-      quote: 'Brandt, jeg tror det her værelse er klammere end fissehår',
-      quoteson: 'Kevin Artz',
-    },
-    {
-      quote: 'At sove, det er så dejligt. Så skal jeg ikke tænke over mit liv',
-      quoteson: 'komo',
-    },
-    {
-      quote: 'Når piger har blå øjne, så får jeg en hård diller',
-      quoteson: 'Anz',
+        `Katte kunne i teorien godt slikke et gulvtæppe op, og så lave en hårbolle`,
+      quoteson: `komo`,
     },
     {
       quote:
-        'Bruno: "Jeg kommer til at sove som en drøm" - Anz: "Som Majbrit??"',
-      quotesonson: 'BnB',
-    },
-    { quote: 'Jeg har slet ikke nogen løg.', quoteson: 'kJacob Sirum Brandt' },
-    {
-      quote: 'Seriøst, jeg stikker min penis igennem min gaffatape lige nu',
-      quoteson: 'Anz Høj',
-    },
-    { quote: 'Kevin høj knepper små bør..', quoteson: 'komo høj' },
-    {
-      quote: 'Med den røv er det ligemeget om det er en mand',
-      quoteson: 'komo høj',
+        `Hvis jeg var en pige, ville jeg have, at fyren tog dip på sin penis`,
+      quoteson: `Brandt`,
     },
     {
-      quote:
-        'Jeg synes til gengæld, at det er vold svært at gøre det på klunkerne',
-      quoteson: 'komo',
+      quote: `Jeg tror, jeg går på dagplejehjælp, kontanthjælp....`,
+      quoteson: `Komo`,
     },
-    { quote: 'Pommes frites sjovs', quoteson: 'Anz' },
-    { quote: 'Jeg skal have pizza juleaften', quoteson: 'komo' },
+    { quote: `Hvor kan man få lamme-kotte-lotte henne?`, quoteson: `Komo` },
     {
-      quote:
-        'Det der er rent faktisk det mest indbydende røvhul, jeg nogensinde har set',
-      quoteson: 'Nicku',
+      quote: `Jeg har lyst til at skyde en klat jizz ud af vinduet`,
+      quoteson: `Anz`,
     },
     {
-      quote: 'Man kan åbenbart lufte så meget ud at der kan komme svimmelsvamp',
-      quoteson: 'Anz',
+      quote: `Seriøst.. hvorfor sluger hun ikke mine svømmere?`,
+      quoteson: `Anz`,
     },
     {
-      quote:
-        '"Seriøst, hvad er en penis vibrator, og hvorfor har jeg aldrig hørt om den?", "Er det ikke bare en PlayStation controller?"',
-      quoteson: 'Anz&Nicku-chan #UwU',
-    },
-    { quote: 'Jeg skal cleane the rat ass', quoteson: 'Anz' },
-    { quote: 'Den smager af røv', quoteson: 'Nickus første ord 2021' },
-    {
-      quote: 'Jeg er den perfekte granat, når man tænker over det',
-      quoteson: 'komo',
+      quote: `Brandt, jeg tror det her værelse er klammere end fissehår`,
+      quoteson: `Kevin Artz`,
     },
     {
-      quote: 'sidder og ser videoer med mænd der glat barberer sig',
-      quoteson: 'Brandtigan 2021',
-    },
-    { quote: 'Jeg har ikke fappet siden 2012', quoteson: 'Anz' },
-    {
-      quote: 'Jeg har aldrig lavet pøller selv',
-      quoteson: 'Bruno H. <:omega_bruno:426832042160947211>',
+      quote: `At sove, det er så dejligt. Så skal jeg ikke tænke over mit liv`,
+      quoteson: `komo`,
     },
     {
-      quote: 'Gryn lærer en at deepthroat ',
-      quoteson: 'Anz Hoar <:mongo_anz:419967243263148043>',
-    },
-    {
-      quote: 'Hun må seriøst gerne babbe mit hul ',
-      quoteson: 'Andreas Løg <:kevin_flue:419964564373897227>',
-    },
-    {
-      quote: 'Du kan ikke stave Juster uden justérbar... nej omvendt ',
-      quoteson: 'Jacob "Dansk A" Serop',
-    },
-    {
-      quote: 'Sur-sød strømning ',
-      quoteson: 'Komo Høj',
-    },
-    {
-      quote: 'Actual factual ',
-      quoteson: 'Komo',
-    },
-    {
-      quote: 'Er der...... kvindelige heste?? ',
-      quoteson: 'Komo Høj <:omega_komo:420333834890903563>',
-    },
-    {
-      quote: 'Jeg glæder mig til, at jeg skal hjem og have Kanye peber ',
-      quoteson: 'Flemming',
-    },
-    {
-      quote: 'Jeg har lyst til at tage Ole bagi ',
-      quoteson: 'KomoTheCoomer',
-    },
-    {
-      quote: 'Hvordan kan et lille hul bløde så meget? ',
-      quoteson: 'Bruno fucking Høj',
-    },
-    {
-      quote: 'Min mors kusines søsters barn.. ',
-      quoteson: 'FlemmingEllevenIQ',
-    },
-    {
-      quote: 'Jeg har aldrig kørt drukbil ',
-      quoteson: 'KomoKappaHøj',
-    },
-    {
-      quote: 'Jeg vil gerne skyde en hjemløs med en sniper ',
-      quoteson: 'Bruno Høj',
-    },
-    {
-      quote: 'Brandt.. Skal vi kysse? ',
-      quoteson: 'KomoKappaPride',
-    },
-    {
-      quote: 'Du er så lækker Bruno, jeg vil tage dig hårdt bagfra ',
-      quoteson: 'Komo',
+      quote: `Når piger har blå øjne, så får jeg en hård diller`,
+      quoteson: `Anz`,
     },
     {
       quote:
-        'Altså Anz.. det var sådan Albert Einstein opfandt teoret teorien ',
-      quoteson: 'KomoStein',
+        `Bruno: "Jeg kommer til at sove som en drøm" - Anz: "Som Majbrit??"`,
+      quotesonson: `BnB`,
+    },
+    { quote: `Jeg har slet ikke nogen løg.`, quoteson: `kJacob Sirum Brandt` },
+    {
+      quote: `Seriøst, jeg stikker min penis igennem min gaffatape lige nu`,
+      quoteson: `Anz Høj`,
+    },
+    { quote: `Kevin høj knepper små bør..`, quoteson: `komo høj` },
+    {
+      quote: `Med den røv er det ligemeget om det er en mand`,
+      quoteson: `komo høj`,
     },
     {
-      quote: 'Så er det sgu da en transfodit ',
-      quoteson: 'Anz Møg',
+      quote:
+        `Jeg synes til gengæld, at det er vold svært at gøre det på klunkerne`,
+      quoteson: `komo`,
+    },
+    { quote: `Pommes frites sjovs`, quoteson: `Anz` },
+    { quote: `Jeg skal have pizza juleaften`, quoteson: `komo` },
+    {
+      quote:
+        `Det der er rent faktisk det mest indbydende røvhul, jeg nogensinde har set`,
+      quoteson: `Nicku`,
     },
     {
-      quote: 'Så kommer psykologogen ',
-      quoteson: 'Komo Gøj',
+      quote: `Man kan åbenbart lufte så meget ud at der kan komme svimmelsvamp`,
+      quoteson: `Anz`,
     },
     {
-      quote: 'Bruno, du glemmer, at det giver bedre immunforsmag ',
-      quoteson: 'Dr. Anz',
+      quote:
+        `"Seriøst, hvad er en penis vibrator, og hvorfor har jeg aldrig hørt om den?", "Er det ikke bare en PlayStation controller?"`,
+      quoteson: `Anz&Nicku-chan #UwU`,
+    },
+    { quote: `Jeg skal cleane the rat ass`, quoteson: `Anz` },
+    { quote: `Den smager af røv`, quoteson: `Nickus første ord 2021` },
+    {
+      quote: `Jeg er den perfekte granat, når man tænker over det`,
+      quoteson: `komo`,
     },
     {
-      quote: 'Vi skal ind og tage dem i rumpetten og tage dem på rumslætten ',
-      quoteson: 'Komo the rumpet coomer',
+      quote: `sidder og ser videoer med mænd der glat barberer sig`,
+      quoteson: `Brandtigan 2021`,
+    },
+    { quote: `Jeg har ikke fappet siden 2012`, quoteson: `Anz` },
+    {
+      quote: `Jeg har aldrig lavet pøller selv`,
+      quoteson: `Bruno H. ${emotes.omegaBruno}`,
     },
     {
-      quote: 'Seriøst, mine nuts sover ',
-      quoteson: 'Anz H.',
+      quote: `Gryn lærer en at deepthroat `,
+      quoteson: `Anz Hoar ${emotes.mongoAnz}`,
+    },
+    {
+      quote: `Hun må seriøst gerne babbe mit hul `,
+      quoteson: `Andreas Løg ${emotes.kevinFlue}`,
+    },
+    {
+      quote: `Du kan ikke stave Juster uden justérbar... nej omvendt `,
+      quoteson: `Jacob "Dansk A" Serop`,
+    },
+    {
+      quote: `Sur-sød strømning `,
+      quoteson: `Komo Høj`,
+    },
+    {
+      quote: `Actual factual `,
+      quoteson: `Komo`,
+    },
+    {
+      quote: `Er der...... kvindelige heste?? `,
+      quoteson: `Komo Høj ${emotes.omegaKomo}`,
+    },
+    {
+      quote: `Jeg glæder mig til, at jeg skal hjem og have Kanye peber `,
+      quoteson: `Flemming`,
+    },
+    {
+      quote: `Jeg har lyst til at tage Ole bagi `,
+      quoteson: `KomoTheCoomer`,
+    },
+    {
+      quote: `Hvordan kan et lille hul bløde så meget? `,
+      quoteson: `Bruno fucking Høj`,
+    },
+    {
+      quote: `Min mors kusines søsters barn.. `,
+      quoteson: `FlemmingEllevenIQ`,
+    },
+    {
+      quote: `Jeg har aldrig kørt drukbil `,
+      quoteson: `KomoKappaHøj`,
+    },
+    {
+      quote: `Jeg vil gerne skyde en hjemløs med en sniper `,
+      quoteson: `Bruno Høj`,
+    },
+    {
+      quote: `Brandt.. Skal vi kysse? `,
+      quoteson: `KomoKappaPride`,
+    },
+    {
+      quote: `Du er så lækker Bruno, jeg vil tage dig hårdt bagfra `,
+      quoteson: `Komo`,
+    },
+    {
+      quote:
+        `Altså Anz.. det var sådan Albert Einstein opfandt teoret teorien `,
+      quoteson: `KomoStein`,
+    },
+    {
+      quote: `Så er det sgu da en transfodit `,
+      quoteson: `Anz Møg`,
+    },
+    {
+      quote: `Så kommer psykologogen `,
+      quoteson: `Komo Gøj`,
+    },
+    {
+      quote: `Bruno, du glemmer, at det giver bedre immunforsmag `,
+      quoteson: `Dr. Anz`,
+    },
+    {
+      quote: `Vi skal ind og tage dem i rumpetten og tage dem på rumslætten `,
+      quoteson: `Komo the rumpet coomer`,
+    },
+    {
+      quote: `Seriøst, mine nuts sover `,
+      quoteson: `Anz H.`,
+    },
+    {
+      quote: `Bruno, jeg fryser, sut mig`,
+      quoteson: `KomoPride`,
+    },
+    {
+      quote: `Jeg ville ønske, jeg havde en større en..`,
+      quoteson: `Jacob ”step roomie” Serop`,
+    },
+    {
+      quote: `Århhh, jeg gav lige mig selv en olfert`,
+      quoteson: `Anz C. Høj`,
+    },
+    {
+      quote: `Jeg skal hive i odderen`,
+      quoteson: `Anz Wankz`,
+    },
+    {
+      quote: `Min fucking roomie, jeg ville ønske, jeg kunne handicap ham`,
+      quoteson: `Komo`,
+    },
+    {
+      quote: `With great fatness comes great humor`,
+      quoteson: `Nicku-Chan`,
+    },
+    {
+      quote: `Jeg giver altid mine homies lidt hentai`,
+      quoteson: `Komo Coom Høj`,
+    },
+    {
+      quote: `Den er meget bedre denne her, hun har en fucking pik i morgen`,
+      quoteson: `Bruno Cooming Høj`,
+    },
+    {
+      quote: `Mig og Anz vi har hård fucking analsex`,
+      quoteson: `Komo Gay Roomie`,
+    },
+    {
+      quote: `Brandt, prøv lige at tag mig bagfra`,
+      quoteson: `Komo Artz`,
+    },
+    {
+      quote: `Nani!`,
+      quoteson: `Komo for 1000000. gang`,
     },
   ],
   gamingForecast: [
@@ -234,22 +280,22 @@ const data = {
   ],
   kvantoMember: {
     bruno: [
-      'Mein Bruno bist Hoar <:omega_bruno:426832042160947211>',
-      'Min Bruno er hård <:omega_bruno:426832042160947211>',
-      'El Bruno es grande und stærk <:omega_bruno:426832042160947211>',
-      "Hello gentlemen, my Bruno's been acting rather hard today <:omega_bruno:426832042160947211>",
-      'Hård er min Bruno <:omega_bruno:426832042160947211>',
-      'At have eller ikke at have en hård Bruno <:omega_bruno:426832042160947211>',
-      'I horisonten ses en hård Bruno <:omega_bruno:426832042160947211>',
-      'Boller og hård Bruno <:omega_bruno:426832042160947211>',
-      'Here we see a Bruno in its natural form, hard <:omega_bruno:426832042160947211>',
-      'Rødgrød med hård Bruno <:omega_bruno:426832042160947211>',
-      "Ey cuh, my Bruno's been trippin lately, he be mad hard <:omega_bruno:426832042160947211>",
+      `Mein Bruno bist Hoar ${emotes.omegaBruno}`,
+      `Min Bruno er hård ${emotes.omegaBruno}`,
+      `El Bruno es grande und stærk ${emotes.omegaBruno}`,
+      `Hello gentlemen, my Bruno\`s been acting rather hard today ${emotes.omegaBruno}`,
+      `Hård er min Bruno ${emotes.omegaBruno}`,
+      `At have eller ikke at have en hård Bruno ${emotes.omegaBruno}`,
+      `I horisonten ses en hård Bruno ${emotes.omegaBruno}`,
+      `Boller og hård Bruno ${emotes.omegaBruno}`,
+      `Here we see a Bruno in its natural form, hard ${emotes.omegaBruno}`,
+      `Rødgrød med hård Bruno ${emotes.omegaBruno}`,
+      `Ey cuh, my Bruno\'s been trippin lately, he be mad hard ${emotes.omegaBruno}`,
     ],
   },
   members: ['Anz', 'Bruno', 'Nicku-chan UwU', 'Komo', 'Brandt'],
   todo: [
-    'Udtænk hvad menuen skal stå på i morgen. <:monner:419956766835736576> ?',
+    `Udtænk hvad menuen skal stå på i morgen. ${emotes.monner} ?`,
     'Red sengen svamle',
     'Det gamle crib trænger vist til en omgang oprydning',
     'Bruv, tag nu den opvask',
@@ -260,22 +306,22 @@ const data = {
     'Læs en bog bruv, for real. Bare én side eller to.',
     'Tid til at tage nogle curls for the girls bruv.',
     ':sneezing_face: Støv fiesta herinde.. Frem med støvsugeren gamle.',
-    ':doughnut: Tid til at finde melen frem, det er bagetid <:pog:538106737970905109>',
+    `:doughnut: Tid til at finde melen frem, det er bagetid ${emotes.pog}`,
     'Hmm. Tror vist godt du kunne trænge til at tage lidt sund mad bruv :/ ',
     'Gør det skrivebord rent... ',
     'Kaf kaf kaf! Det er vist på tide til en lil én ;) ',
     'Find noget dope du vil købe :dollar:',
     'Gå en tur brother. De gamle stænger trænger vist til lidt bevægelse',
-    'komos mor <:monkalaugh:756840563914834010>',
+    `komos mor ${emotes.monkaS}`,
     'Quick power nap :sleeping:',
     'Du er vist ikke opdateret! Læs nyhederne :newspaper:',
     'SNACK RUN :heart_eyes:',
-    "En lil' quickie <:wurst:419965493189935115>",
-    'MONNER RUNNER <:monner:419956766835736576>',
-    'Få gjort det toilet rent, det er mere brunt end hvidt :toilet:',
-    "Fyr op for noget 80'er pop :microphone:",
-    'Find selv på noget <:bj_kongen:419960267066310656>',
-    'Inviter en Tinder dame på date <:brandt_damer:419964006913277962>',
+    `En lil\` quickie ${emotes.wurst}`,
+    `MONNER RUNNER ${emotes.monner}`,
+    `Få gjort det toilet rent, det er mere brunt end hvidt :toilet:`,
+    "Fyr op for noget 80`er pop :microphone:",
+    `Find selv på noget ${emotes.bjKongen}`,
+    `Inviter en Tinder dame på date ${emotes.brandtDamer}`,
   ],
 };
 

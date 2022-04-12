@@ -1,7 +1,6 @@
 const data = require("../data/index.js");
+const emotes = require('../data/emotes')
 const fetch = require("node-fetch");
-const fs = require("fs");
-const path = require("path");
 const cloudinary = require('cloudinary').v2
 
 // Util functions
@@ -10,32 +9,32 @@ function randomNum(min, max) {
 }
 
 function penisComment(penisSize) {
-  let comment = '';
+  let comment = ``;
   if (penisSize === 1) {
     return (comment =
-      "Tillykke! Du har formået det umulige, din penis er officielt 14  gange mindre end komo's, og det siger lidt <:pepelaugh:609080105695838234>");
+      `Tillykke! Du har formået det umulige, din penis er officielt 14  gange mindre end komos, og det siger lidt ${emotes.pepeLaugh}`);
   } else if (penisSize === 2) {
     return (comment =
-      'Selv min nye kikkert har svært ved at få øje på den lille ostereje <:pepelaugh:609080105695838234>');
+      `Selv min nye kikkert har svært ved at få øje på den lille ostereje`);
   } else if (penisSize === 3) {
-    return (comment = 'Sikke en sød lille ven du har dig der :)');
+    return (comment = `Sikke en sød lille ven du har dig der :)`);
   } else if (penisSize === 4) {
     return (comment =
-      'SELV ASIATERNE LIGNER HULK I FORHOLD TIL DIG <:omegalul:420997226446323732>');
+      `SELV ASIATERNE LIGNER HULK I FORHOLD TIL DIG ${emotes.omegalul}`);
   } else if (penisSize === 5) {
     return (comment =
-      'NURGH EN LIL DVÆRGHAMSTER <:omegalul:420997226446323732>');
+      `NURGH EN LIL DVÆRGHAMSTER ${emotes.omegalul}`);
   } else if (penisSize <= 7 && penisSize >= 6) {
     return (comment =
-      'Damerne ved literally ikke når du enter the cave.. <:pepehands:538114405838225409>');
+      `Damerne ved literally ikke når du enter the cave.. ${emotes.pepeHands}`);
   } else if (penisSize >= 8 && penisSize <= 14) {
-    return (comment = 'oh nonono.. <:pepelaugh:609080105695838234>');
+    return (comment = `oh nonono.. ${emotes.pepeLaugh}`);
   } else if (penisSize >= 15 && penisSize <= 19) {
-    return (comment = 'Respect bro. <:brandt_damer:419964006913277962>');
+    return (comment = `Respect bro. ${emotes.brandtDamer}`);
   } else if (penisSize >= 20 && penisSize <= 24) {
-    return (comment = 'UGANDAN BROTHER! <:pog:538106737970905109>');
+    return (comment = `UGANDAN BROTHER! ${emotes.pog}`);
   } else {
-    return (comment = 'DEN DANSKE MANDINGO <:pog:538106737970905109>');
+    return (comment = `DEN DANSKE MANDINGO ${emotes.pog}`);
   }
 }
 
@@ -46,7 +45,6 @@ function handleImage(args) {
 }
 
 // Command functions
-
 const getQuote = (msg) => {
   const randomQuote = Math.floor(
     Math.random() * Math.floor(data.quotes.length)
@@ -105,7 +103,7 @@ const getImage = async (msg) => {
   const num = randomNum(0, filteredImages.length);
   if (filteredImages.length === 0) {
     return msg.channel.send(
-      'Ingen billeder fra bot <:pepehands:538114405838225409>'
+      `Ingen billeder fra bot ${emotes.pepeHands}`
     );
   } else {
     const img = filteredImages[num].data.url;
@@ -135,7 +133,7 @@ const getBruno = (msg) => {
       data.kvantoMember.bruno[randomNum(0, data.kvantoMember.bruno.length)]
     );
   } else {
-    msg.channel.send('who? <:yikes:538112912817127456>');
+    msg.channel.send(`who? ${emotes.yikes}`);
   }
 };
 
@@ -146,7 +144,7 @@ const getNickname = (msg) => {
 const getWho = (msg) => {
   const kvanto = ['ANZ', 'BRANDT', 'BRUNO', 'KOMO', 'NICKU'];
   const num = randomNum(0, 4);
-  const comment = `${kvanto[num]} WH<:omegalul:420997226446323732>?`;
+  const comment = `${kvanto[num]} WH${emotes.omegalul}`;
 
   msg.channel.send(comment);
 };
@@ -159,7 +157,7 @@ const getDonate = (msg) => {
 
 const getPercantage = (msg) => {
   const perc = randomNum(0, 100);
-  msg.channel.send(`Udregner.. <:brandt_smart:419959960839913483>`);
+  msg.channel.send(`Udregner.. ${emotes.brandtSmart}`);
 
   setTimeout(() => {
     msg.channel.send(`Hmm, procenten er ${perc}%`);
@@ -177,7 +175,7 @@ const getTodo = (msg) => {
   console.log(todo)
 
   msg.channel.send(`Hmm, hvad mon den magiske krystal siger :robot: :crystal_ball:`);
-  
+
   setTimeout(() => {
     msg.channel.send(todo);
   }, 3000);

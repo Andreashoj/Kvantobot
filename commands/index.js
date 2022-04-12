@@ -20,7 +20,6 @@ const commands = async msg => {
       "**!quote - random kvanto quote \n!sutbruno - for at sutte brunos 15,5'er!\n!quote - for en random kvanto quote!\n!kvantosnap - for en random kvantosnap\n!image - for en random image search\n!raffle - eksempel -> !raffle komo bruno og så bliver en vinder valgt!**"
     );
   } else if (msg.content === "!sutbruno") {
-    // FJERN IGEN HEHEHE
     msg.reply("GWAK GWAK GWAK");
   }
 

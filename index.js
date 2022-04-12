@@ -6,12 +6,13 @@ const Discord = require('discord.js');
 const bot = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_MESSAGE_REACTIONS'] });
 const cloudinary = require('cloudinary').v2
 
-
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
   api_key: process.env.API_KEY,
   api_secret: process.env.API_SECRET,
 })
+
+const token = process.env.DC_TOKEN
 
 bot.commands = new Discord.Collection();
 
@@ -23,8 +24,6 @@ for (const file of commandFiles) {
     bot.commands.set(command.name, command);
   }
 }
-
-const token = process.env.DC_TOKEN
 
 bot.on('ready', async () => {
   console.log('Kvantobot ready for service')
@@ -58,20 +57,7 @@ bot.on('message', msg => {
   }
 })
 
-// // CRON jobs
-
-// // Scheduled gaming forecast
-// schedule.scheduleJob('00 00 9 * * *', () => {
-//   randomForecast = parseInt(
-//     Math.random() * Math.floor(data.gamingForecast.length)
-//   );
-//   const channel = bot.channels.cache.get('228187454182522881');
-//   channel.send(
-//     `Dagens gaming horoskop lyder således..\n **${data.gamingForecast[randomForecast]}**`
-//   );
-// });
-
-schedule.scheduleJob({ hour: 9, minute: 0 }, () => {
+schedule.scheduleJob({ hour: 8, minute: 0 }, () => {
   const channel = bot.channels.cache.get('687204415563628602');
 
   channel.send(`Godmorgen kvanto, lad os se hvad dagens meloner byder på`);
