@@ -71,7 +71,7 @@ bot.on('message', msg => {
 //   );
 // });
 
-schedule.scheduleJob({ hour: 09, minute: 00 }, () => {
+schedule.scheduleJob({ hour: 9, minute: 0 }, () => {
   const channel = bot.channels.cache.get('687204415563628602');
 
   channel.send(`Godmorgen kvanto, lad os se hvad dagens meloner byder på`);
