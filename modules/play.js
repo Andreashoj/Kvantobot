@@ -11,6 +11,7 @@ const nickuJAMS = '<:nicklas_hype:419958177501675540> HYYYPE';
 const brandtDAMER = '<:brandt_damer:419964006913277962> om i køen';
 const reactions = [anzBANGER, komoGAY, brunoJAMS, brandtJAMMER, nickuJAMS];
 
+
 function randomNum(min, max) {
   return Math.round(Math.random() * (max - min + 1) + min);
 }
@@ -70,34 +71,6 @@ const getSong = async (message, args, server_queue, voice_channel) => {
   }
 };
 
-module.exports = {
-  name: 'play',
-  aliases: ['skip', 'stop', 'dj'], //We are using aliases to run the skip and stop command follow this tutorial if lost: https://www.youtube.com/watch?v=QBUJ3cdofqc
-  cooldown: 0,
-  description: 'Advanced music bot',
-  async execute(message, args, cmd, client, Discord) {
-    //Checking for the voicechannel and permissions (you can add more permissions if you like).
-    const voice_channel = message.member.voice.channel;
-    if (!voice_channel) return message.channel.send(brandtDenial);
-    const permissions = voice_channel.permissionsFor(message.client.user);
-    if (!permissions.has('CONNECT')) return message.channel.send(brandtDenial);
-    if (!permissions.has('SPEAK')) return message.channel.send(brandtDenial);
-
-    //This is our server queue. We are getting this server queue from the global queue.
-    const server_queue = queue.get(message.guild.id);
-
-    //If the user has used the play command
-    if (cmd === 'play') {
-      await getSong(message, args, server_queue, voice_channel);
-    } else if (cmd === 'dj') {
-      await getSong(message, ['det gutterne'], server_queue, voice_channel);
-      return message.channel.send(
-        'https://tenor.com/view/dancing-stanley-li-dj-ravine-jamming-dj-gif-17539848'
-      );
-    } else if (cmd === 'skip') skip_song(message, server_queue);
-    else if (cmd === 'stop') stop_song(message, server_queue);
-  },
-};
 
 const video_player = async (guild, song) => {
   const song_queue = queue.get(guild.id);
@@ -135,3 +108,63 @@ const stop_song = (message, server_queue) => {
   server_queue.skip_song = [];
   server_queue.connection.dispatcher.end();
 };
+
+module.exports = function (bot) {
+  const prefix = "!"
+  let module = {}
+
+  bot.on('message', msg => {
+    if (!msg.content.startsWith(prefix) || msg.author.bot) return;
+
+    const acceptedArgs = ['skip', 'play', 'dj', 'stop']
+    const hasArgs = acceptedArgs.some(word => msg.content.includes(word))
+
+    if (!hasArgs) {
+      return;
+    }
+
+    const args = msg.content.slice(prefix.length).split(/ +/);
+    const cmd = args.shift().toLowerCase();
+
+    const command = bot.commands.get(cmd) || bot.commands.find(a => a.aliases && a.aliases.includes(cmd));
+
+    try {
+      command.execute(msg, args, cmd, bot, Discord);
+    } catch (err) {
+      msg.reply("There was an error")
+      console.log(err)
+    }
+  })
+
+  module.player = {
+    name: 'play',
+    aliases: ['skip', 'stop', 'dj'], //We are using aliases to run the skip and stop command follow this tutorial if lost: https://www.youtube.com/watch?v=QBUJ3cdofqc
+    cooldown: 0,
+    description: 'Advanced music bot',
+    async execute(message, args, cmd, client, Discord) {
+      //Checking for the voicechannel and permissions (you can add more permissions if you like).
+      const voice_channel = message.member.voice.channel;
+      if (!voice_channel) return message.channel.send(brandtDenial);
+      const permissions = voice_channel.permissionsFor(message.client.user);
+      if (!permissions.has('CONNECT')) return message.channel.send(brandtDenial);
+      if (!permissions.has('SPEAK')) return message.channel.send(brandtDenial);
+
+      //This is our server queue. We are getting this server queue from the global queue.
+      const server_queue = queue.get(message.guild.id);
+
+      //If the user has used the play command
+      if (cmd === 'play') {
+        await getSong(message, args, server_queue, voice_channel);
+      } else if (cmd === 'dj') {
+        await getSong(message, ['det gutterne'], server_queue, voice_channel);
+        return message.channel.send(
+          'https://tenor.com/view/dancing-stanley-li-dj-ravine-jamming-dj-gif-17539848'
+        );
+      } else if (cmd === 'skip') skip_song(message, server_queue);
+      else if (cmd === 'stop') stop_song(message, server_queue);
+    }, 
+  }
+
+  // Music player
+  bot.commands.set(module.player.name, module.player);
+}

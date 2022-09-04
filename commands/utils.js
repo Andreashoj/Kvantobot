@@ -187,5 +187,7 @@ module.exports = {
   getPercantage,
   getShot,
   getMention,
-  getTodo
+  getTodo,
+  getSnap,
+  randomNum
 }
