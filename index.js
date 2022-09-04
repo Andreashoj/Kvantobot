@@ -35,6 +35,7 @@ bot.on('message', (msg) => commands(msg));
 const prefix = "!"
 
 bot.on('message', msg => {
+  console.log('test', msg.content)
   if (!msg.content.startsWith(prefix) || msg.author.bot) return;
 
   const acceptedArgs = ['skip', 'play', 'dj', 'stop']
