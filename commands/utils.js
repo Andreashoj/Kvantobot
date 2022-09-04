@@ -57,19 +57,13 @@ const getQuote = (msg) => {
 const getSize = (msg) => {
   const randomDe = Math.floor(Math.random() * (9 - 1 + 1) + 1);
   const randomLowerNum = randomNum(1, 100);
-  let penisSize = '';
+  let penisSize = 0;
 
-  if (randomLowerNum < 5) {
-    penisSize = randomNum(0, 5);
-    msg.reply(
-      `Din penis er ${penisSize}.${randomDe} cm. ${penisComment(penisSize)}`
-    );
-  } else {
-    penisSize = randomNum(5, 26);
-    msg.reply(
-      `Din penis er ${penisSize}.${randomDe} cm. ${penisComment(penisSize)}`
-    );
-  }
+  penisSize = randomLowerNum < 5 ? randomNum(0, 5) : randomNum(5, 33)
+
+  msg.reply(
+    `Din penis er ${penisSize}.${randomDe} cm. ${penisComment(penisSize)}`
+  );
 };
 
 const getSnap = (msg) => {
@@ -181,16 +175,17 @@ const getTodo = (msg) => {
   }, 3000);
 };
 
-exports.getQuote = getQuote;
-exports.getSize = getSize;
-exports.getSnap = getSnap;
-exports.getRaffle = getRaffle;
-exports.getImage = getImage;
-exports.getBruno = getBruno;
-exports.getNickname = getNickname;
-exports.getWho = getWho;
-exports.getDonate = getDonate;
-exports.getPercantage = getPercantage;
-exports.getShot = getShot;
-exports.getMention = getMention;
-exports.getTodo = getTodo;
+module.exports = {
+  getQuote,
+  getSize,
+  getRaffle,
+  getImage,
+  getBruno,
+  getNickname,
+  getWho,
+  getDonate,
+  getPercantage,
+  getShot,
+  getMention,
+  getTodo
+}
