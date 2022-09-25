@@ -10,6 +10,7 @@ require('./modules/giphy')(bot).search();
 require('./modules/cloudinary');
 require('./modules/schedules.js')(bot);
 require('./modules/play.js')(bot);
+require('./modules/openai.js')(bot);
 
 
 bot.on('ready', () => console.log('Kvantobot ready for service'));
