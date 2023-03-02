@@ -6,7 +6,7 @@ const bot = new Discord.Client({ intents: ['GUILDS', 'GUILD_MESSAGES', 'GUILD_ME
 
 bot.commands = new Discord.Collection();
 
-require('./modules/giphy')(bot).search();
+// require('./modules/giphy')(bot).search();
 require('./modules/cloudinary');
 require('./modules/schedules.js')(bot);
 require('./modules/play.js')(bot);

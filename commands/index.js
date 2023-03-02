@@ -1,6 +1,6 @@
 const command = require("./utils.js");
 
-const commands = async msg => {
+const commands = async (msg) => {
   if (msg.content === "hvor bor fuglene?") {
     msg.reply("I GENBRUGSBUTIKKEN!");
   }
@@ -62,17 +62,20 @@ const commands = async msg => {
   }
 
   if (msg.content === "!shot") {
-    command.getShot(msg)
+    command.getShot(msg);
   }
 
   if (msg.content === "!todo") {
-    command.getTodo(msg)
+    command.getTodo(msg);
   }
 
-  if(msg.mentions.members.first()) {
+  if (msg.mentions.members.first()) {
     for (let [key, value] of msg.mentions.members) {
-      if(value.user.username === 'KvantoBot' || value.user.username === 'Andreas') {
-        msg.react('😍')
+      if (
+        value.user.username === "KvantoBot" ||
+        value.user.username === "Andreas"
+      ) {
+        msg.react("😍");
       }
     }
   }
